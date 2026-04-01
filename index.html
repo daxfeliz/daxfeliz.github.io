@@ -73,7 +73,24 @@
 			.mentee-block p { margin: 0 0 0.25em 0; font-size: 0.9em; }
 			.outcome { font-size: 0.8em; opacity: 0.65; font-style: italic; }
 
-			/* ── Talks list ── */
+			/* ── Bootcamp CTA button ── */
+			.cta-btn {
+				display: inline-block;
+				margin-top: 1.2em;
+				padding: 0.65em 1.6em;
+				border: 2px solid rgba(255,255,255,0.6);
+				border-radius: 4px;
+				font-size: 1em;
+				font-weight: 600;
+				letter-spacing: 0.04em;
+				text-decoration: none;
+				color: inherit;
+				transition: background 0.2s, border-color 0.2s;
+			}
+			.cta-btn:hover {
+				background: rgba(255,255,255,0.12);
+				border-color: rgba(255,255,255,0.9);
+			}
 			.talk-entry { margin-bottom: 1.2em; }
 			.talk-entry .talk-title { font-weight: 600; }
 			.talk-entry .talk-meta { font-size: 0.82em; opacity: 0.7; }
@@ -120,6 +137,7 @@
 						<li><a href="#Publications">Publications</a></li>
 						<li><a href="#Talks">Talks</a></li>
 						<li><a href="#Mentoring">Mentoring</a></li>
+						<li><a href="#Bootcamp">Bootcamp</a></li>
 						<li><a href="#Outreach">Outreach</a></li>
 						<li><a href="#Media">Media</a></li>
 						<li><a href="CV/Dax_Feliz_CV.pdf" target="_blank">CV</a></li>
@@ -173,8 +191,50 @@
 
 						<p><strong>NEMESIS II</strong> (in prep.): Scale-up to the full TESS primary mission. Current yield: 6,300+ threshold crossing events (SNR &gt; 10), with early automated vetting producing ~150 new planet candidates. The pipeline now incorporates odd-even depth comparisons, centroid motion tests, and a/R<sub>★</sub> cuts. Based on our detection efficiency from NEMESIS I, we expect ~120 CTOIs for the full primary mission, supplementing the ~500 M-dwarf TOIs currently in the ExoFOP catalog.</p>
 
-						<center><img src="images/NEMESIS.png" width="400" style="margin:0.8em 0;" alt="NEMESIS period-radius diagram" /><br>
-						<small>Period–radius diagram of TESS planet candidates from NEMESIS I (Feliz et al. 2021).</small></center>
+						<!-- Pipeline flowchart + example output: export from Google Slides as PNG at full res -->
+						<!-- Rename files to: nemesis_pipeline_flowchart.png, nemesis_pipeline_toi270.png  -->
+						<div style="display:flex; flex-wrap:wrap; gap:1em; justify-content:center; margin:1.2em 0;">
+							<figure style="flex:1 1 280px; max-width:420px; margin:0; text-align:center;">
+								<img src="images/nemesis_pipeline_flowchart.png"
+									 style="width:100%; border:1px solid rgba(255,255,255,0.1); border-radius:4px;"
+									 alt="NEMESIS pipeline flowchart: light curve extraction through transit search to planet candidate" />
+								<figcaption style="font-size:0.75em; opacity:0.65; margin-top:0.4em;">
+									NEMESIS pipeline architecture: FFI download → background subtraction → aperture photometry → PLD decorrelation → BLS/TLS transit search → automated vetting → planet candidate.
+								</figcaption>
+							</figure>
+							<figure style="flex:1 1 280px; max-width:420px; margin:0; text-align:center;">
+								<img src="images/nemesis_pipeline_toi270.png"
+									 style="width:100%; border:1px solid rgba(255,255,255,0.1); border-radius:4px;"
+									 alt="NEMESIS pipeline output for TOI 270: SAP, PLD-corrected, smoothed, and detrended light curves" />
+								<figcaption style="font-size:0.75em; opacity:0.65; margin-top:0.4em;">
+									Example pipeline output for the multi-planet M-dwarf system TOI 270 (TIC 259377017, T<sub>eff</sub> = 3532 K). From top: SAP flux, PLD-corrected, smoothed, and fully detrended light curve. CDPP improves from 1218 to 586 ppm hr<sup>−½</sup>.
+								</figcaption>
+							</figure>
+						</div>
+
+						<!-- Vetting dashboard: export slide 18 from Google Slides as PNG at full res -->
+						<!-- Rename file to: nemesis_vetting_dashboard.png -->
+						<figure style="margin:1.2em 0; text-align:center;">
+							<img src="images/nemesis_vetting_dashboard.png"
+								 style="width:100%; max-width:860px; border:1px solid rgba(255,255,255,0.1); border-radius:4px;"
+								 alt="NEMESIS automated vetting dashboard for TIC 259377017 showing odd/even test, TLS power spectrum, centroid analysis, phase-folded light curve, and symmetry test" />
+							<figcaption style="font-size:0.75em; opacity:0.65; margin-top:0.4em;">
+								Automated vetting report for a NEMESIS II planet candidate (TIC 259377017). Panels show (clockwise from top-left): odd/even transit depth comparison, detrended light curve with transit markers, TLS power spectrum, phase-folded transit, centroid motion mid-transit, aperture mask, and pass/fail results for all automated vetting metrics.
+							</figcaption>
+						</figure>
+
+						<!-- NEMESIS II noise floor: export slide 20 right panel from Google Slides as PNG -->
+						<!-- Rename file to: nemesis2_cdpp_noise_floor.png -->
+						<figure style="margin:1.2em 0; text-align:center;">
+							<img src="images/nemesis2_cdpp_noise_floor.png"
+								 style="width:100%; max-width:860px; border:1px solid rgba(255,255,255,0.1); border-radius:4px;"
+								 alt="NEMESIS II CDPP vs TESS magnitude for SAP, PLD-corrected, and detrended light curves across the full primary mission sample" />
+							<figcaption style="font-size:0.75em; opacity:0.65; margin-top:0.4em;">
+								NEMESIS II photometric noise floor across the full TESS primary mission M-dwarf sample. CDPP vs. TESS magnitude for SAP (left), PLD-corrected (center), and fully detrended (right) light curves. Colored curves show predicted noise contributions; the red dashed line marks the faint-end survey limit.
+							</figcaption>
+						</figure>
+
+
 					</div>
 
 					<!-- Pillar 2 -->
@@ -190,15 +250,30 @@
 						<p>Collaborative contributions: Paudel et al. 2024 (multiwavelength TESS/K2/Swift/HST M-dwarf flare survey); Cool Stars 22 poster on photometric activity cycles in M-dwarfs (<a href="https://zenodo.org/records/13146889" target="_blank">Zenodo</a>).</p>
 					</div>
 
-					<!-- Pillar 3 -->
+					<!-- Pillar 3 / Future Directions -->
 					<div class="pillar">
-						<h3>Atmosphere Retention Metric (ARM)
-							<span class="tag">JWST / Roman / PLATO Targets</span>
+						<h3>Future Directions: From Detections to Atmosphere Forecasts
+							<span class="tag">TESS / JWST / Roman / PLATO</span>
 							<span class="tag">In Progress</span>
 						</h3>
-						<p>The ARM framework combines the output of NEMESIS (planet catalog with completeness characterization) and the flare activity program (per-star XUV history) with Gaia-derived kinematics and SDSS spectroscopic metallicities to compute a per-planet probability of retaining an atmosphere. The result is a ranked, completeness-aware target list for transmission spectroscopy follow-up with JWST, Roman, and PLATO.</p>
 
-						<p>Key ingredients: per-planet escape velocity estimates (from mass–radius relations, anchored by RV follow-up where available), completeness-corrected flare rate priors from multi-epoch FFDs, and Galactic age context from Gaia kinematics. Graduate student Andrea Bracamonte (CUNY/CCA) is building the CME detection and spectroscopic efficiency framework that feeds into the ARM flare priors.</p>
+						<p>The transit survey and flare activity programs are not ends in themselves — they are the foundation for a longer-term question: <em>which nearby M-dwarf planets are most likely to retain an atmosphere, and how do we prove it with data?</em> The demographic signature of the radius valley hints that atmospheric escape is shaping planet populations, but demographics alone cannot tell us which individual planets are worth targeting with JWST or Roman. The <strong>Cosmic Shoreline</strong> (Zahnle &amp; Catling 2017) offers a physical bridge: it separates worlds that retain atmospheres from those that don't as a function of cumulative stellar irradiation and escape velocity — turning a population-level hint into a per-planet, testable boundary.</p>
+
+						<!-- Slide 22 figure: export from Google Slides as PNG at full res (wide aspect ratio) -->
+						<!-- Rename file to: nemesis_arm_shoreline.png -->
+						<figure style="margin:1.2em 0; text-align:center;">
+							<img src="images/nemesis_arm_shoreline.png"
+								 style="width:100%; max-width:860px; border:1px solid rgba(255,255,255,0.1); border-radius:4px;"
+								 alt="Two-panel figure: (a) NEMESIS M-dwarf planet candidates in period-radius space with stellar insolation color-coding and radius valley boundaries; (b) the same planets placed on the Cosmic Shoreline diagram of historic XUV fluence vs escape velocity, colored by Atmosphere Retention Metric (ARM)" />
+							<figcaption style="font-size:0.75em; opacity:0.65; margin-top:0.4em;">
+								<strong>Which M-dwarf planets can keep an atmosphere?</strong> (a) NEMESIS planet candidates in orbital period–radius space, color-coded by stellar insolation. The radius valley boundary separating rocky planets from sub-Neptunes is shown for both Sun-like and low-mass stars, with RV detection thresholds overlaid. (b) The same planets placed on the Cosmic Shoreline (historic XUV fluence vs. escape velocity), color-coded by the Atmosphere Retention Metric (ARM). Solar System bodies (squares) anchor the empirical atmosphere-loss boundary. Planets in the blue region are strong candidates for retained atmospheres and priority targets for JWST / Roman follow-up.
+							</figcaption>
+						</figure>
+
+						<p>My research group will build the <strong>Atmosphere Retention Metric (ARM)</strong> — a predictive, completeness-aware framework with three interlocking components. First, the NEMESIS catalog provides a vetted, completeness-characterized nearby M-dwarf planet sample with uniform Gaia kinematic ages and SDSS spectroscopic metallicities, placing each system consistently in period–radius and escape velocity–I<sub>XUV</sub> space. Second, a targeted mass-anchor program — using EPRV where stellar activity permits, and TTVs or informative upper limits otherwise — pins down escape velocities for the highest-leverage planets using an information-gain targeting strategy. Third, the stellar activity program delivers per-star XUV histories from multi-epoch flare frequency distributions and rotation periods, which feed into a predictive model that allows the atmosphere-loss boundary to shift with stellar age and composition.</p>
+
+						<p>The output is a per-planet atmosphere-retention probability with uncertainty, and a ranked, observation-ready spectroscopy target list for JWST, Roman, and PLATO. Roman's wide-field time-domain coverage will extend the nearby M-dwarf sample to longer periods and improve activity baselines; PLATO's long time coverage and stellar characterization will link demographics to age and evolutionary state. Together, these missions transform the current planet-discovery era into a forecasting era — and the ARM framework is designed to be the tool that connects them.</p>
+
 					</div>
 
 					<!-- Proxima -->
@@ -469,6 +544,29 @@
 						<p><strong>Felix Bean</strong>, Hunter's Lane High School</p>
 						<p>Detecting exoplanet transits in TESS light curves.</p>
 					</div>
+				</article>
+
+				<!-- ═══════════════════════════════════════════════ BOOTCAMP ══ -->
+				<article id="Bootcamp">
+					<h2 class="major">CUNY Bridge Programming Bootcamp</h2>
+					<span class="image main"><img src="images/workshop.jpeg" alt="Workshop" /></span>
+
+					<p>Each August since 2022, I serve as curriculum developer and lead instructor for a two-week programming bootcamp welcoming incoming students to the <a href="https://www.gc.cuny.edu/astrophysics" target="_blank">CUNY Master's Program in Astrophysics</a>. The bootcamp is designed for students of varied computational backgrounds and is built around the tools and workflows they will encounter immediately in their graduate research.</p>
+
+					<h3 style="border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:0.3em;">What the course covers</h3>
+					<p>The curriculum spans two weeks of daily instruction (~10–15 students per cohort) and includes Python fundamentals, scientific computing with NumPy and pandas, data visualization with Matplotlib, working with astronomical data formats (FITS, light curves, catalogs), version control with Git/GitHub, and an introduction to the NYC astronomy community and its research groups. All materials are open and publicly available.</p>
+
+					<h3 style="border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:0.3em; margin-top:1.4em;">Who it is for</h3>
+					<p>Incoming students in the CUNY Master's in Astrophysics program — particularly those coming from institutions with limited access to research computing infrastructure. No prior Python experience is assumed. The course is paced to bring students from first principles to research-ready in two weeks, with an emphasis on the specific tools used in time-domain photometry and exoplanet research.</p>
+
+					<h3 style="border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:0.3em; margin-top:1.4em;">Editions</h3>
+					<p>August 2022 · August 2023 · August 2024 · August 2025</p>
+
+					<center>
+						<a href="https://daxfeliz.github.io/cunybridgebootcamp/" target="_blank" class="cta-btn">
+							Go to the Bootcamp &#8594;
+						</a>
+					</center>
 				</article>
 
 				<!-- ══════════════════════════════════════════════ OUTREACH ══ -->
