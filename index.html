@@ -11,561 +11,558 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* ── Stat bar ── */
+			.stat-bar {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.6em 1.4em;
+				margin: 1.2em 0 1.6em 0;
+				padding: 0.9em 1.1em;
+				border: 1px solid rgba(255,255,255,0.15);
+				border-radius: 6px;
+				background: rgba(255,255,255,0.04);
+			}
+			.stat-bar .stat { text-align: center; flex: 1 1 80px; }
+			.stat-bar .stat .num { font-size: 1.5em; font-weight: 700; display: block; }
+			.stat-bar .stat .lbl { font-size: 0.72em; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.08em; }
+
+			/* ── Research pillars ── */
+			.pillar {
+				border-left: 3px solid rgba(255,255,255,0.25);
+				padding-left: 1em;
+				margin-bottom: 2em;
+			}
+			.pillar h3 { margin-bottom: 0.3em; }
+			.pillar .tag {
+				display: inline-block;
+				font-size: 0.65em;
+				padding: 0.15em 0.5em;
+				border: 1px solid rgba(255,255,255,0.3);
+				border-radius: 3px;
+				margin-right: 0.3em;
+				vertical-align: middle;
+				text-transform: uppercase;
+				letter-spacing: 0.06em;
+				opacity: 0.75;
+			}
+
+			/* ── Publication list ── */
+			.pub-section h3 {
+				border-bottom: 1px solid rgba(255,255,255,0.15);
+				padding-bottom: 0.3em;
+				margin-top: 1.6em;
+			}
+			ol.pubs { padding-left: 1.4em; }
+			ol.pubs li { margin-bottom: 0.7em; font-size: 0.9em; line-height: 1.5; }
+			ol.pubs li strong { font-weight: 700; }
+			ol.pubs li em { font-style: italic; }
+			ol.pubs li a { color: inherit; border-bottom: 1px dotted rgba(255,255,255,0.4); }
+			ol.pubs li a:hover { border-bottom-style: solid; }
+
+			/* ── Mentoring table ── */
+			.mentee-block { margin-bottom: 1.4em; }
+			.mentee-block .level-tag {
+				font-size: 0.65em;
+				text-transform: uppercase;
+				letter-spacing: 0.08em;
+				opacity: 0.6;
+				display: block;
+				margin-bottom: 0.2em;
+			}
+			.mentee-block p { margin: 0 0 0.25em 0; font-size: 0.9em; }
+			.outcome { font-size: 0.8em; opacity: 0.65; font-style: italic; }
+
+			/* ── Talks list ── */
+			.talk-entry { margin-bottom: 1.2em; }
+			.talk-entry .talk-title { font-weight: 600; }
+			.talk-entry .talk-meta { font-size: 0.82em; opacity: 0.7; }
+			.talk-badge {
+				display: inline-block;
+				font-size: 0.62em;
+				padding: 0.1em 0.45em;
+				border-radius: 3px;
+				text-transform: uppercase;
+				letter-spacing: 0.06em;
+				margin-right: 0.3em;
+				background: rgba(255,255,255,0.12);
+				vertical-align: middle;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
 		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="image">
-							<!-- <span class="icon fa-gem"></span> -->
-							<span class="image avatar"><img src="images/Dax_headshot2.jpg" alt=" " width="300" height="400"/></span>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Dax L. Feliz, PhD</h1>
-								<p>Flatiron Research Fellow at the Flatiron Institute Center for Computational Astrophysics in NYC. I am a exoplanet + stellar activity scientist building scalable pipelines (Kepler/TESS/PLATO) to find and characterize small planets around M-dwarfs, and the stellar physics that shapes them.</p>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#AboutMe">About Me</a></li>
-								<li><a href="#Research">Research</a></li>
-								<li><a href="#Media">Media/Press</a></li>
-								<li><a href="#Outreach">Outreach</a></li>	
-								<li><a href="#Talks">Talks</a></li>
-								<li><a href="#Workshops">Workshops</a></li>
-								<li><a href="CV/Dax_Feliz_CV.pdf">CV</a></li> 
-								<!--<li><a href="#elements">Elements</a></li>-->
-							</ul>
-						</nav>
-					</header>
+			<!-- Header -->
+			<header id="header">
+				<div class="image">
+					<span class="image avatar"><img src="images/Dax_headshot2.jpg" alt="Dax L. Feliz" width="300" height="400"/></span>
+				</div>
+				<div class="content">
+					<div class="inner">
+						<h1>Dax L. Feliz, PhD</h1>
+						<p>Flatiron Research Fellow · Center for Computational Astrophysics, NYC<br>
+						Exoplanet transits · Stellar flares · M-dwarf photometry · TESS / PLATO pipelines</p>
+						<p style="font-size:0.85em; margin-top:0.5em;">
+							<a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Feliz%2C+Dax%22&sort=date+desc" target="_blank">NASA ADS</a> &nbsp;·&nbsp;
+							<a href="https://orcid.org/0000-0002-2457-7889" target="_blank">ORCID</a> &nbsp;·&nbsp;
+							<a href="https://github.com/daxfeliz" target="_blank">GitHub</a> &nbsp;·&nbsp;
+							<a href="mailto:dfeliz@flatironinstitute.org">Email</a>
+						</p>
+					</div>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="#AboutMe">About</a></li>
+						<li><a href="#Research">Research</a></li>
+						<li><a href="#Publications">Publications</a></li>
+						<li><a href="#Talks">Talks</a></li>
+						<li><a href="#Mentoring">Mentoring</a></li>
+						<li><a href="#Outreach">Outreach</a></li>
+						<li><a href="#Media">Media</a></li>
+						<li><a href="CV/Dax_Feliz_CV.pdf" target="_blank">CV</a></li>
+					</ul>
+				</nav>
+			</header>
 
-				<!-- Main -->
-					<div id="main">
-						<!-- AboutMe -->
-						<article id="AboutMe">
-							<h2 class="major">About Me</h2> 
-							<span class="image main"><img src="images/harlem.jpg" alt="" /></span>
-							<p>Growing up in Spanish Harlem, the beauty of the night's sky was often robbed from my gaze due to New York City's light pollution. That did not inhibit me from questioning what lies beyond the steel and glass towers and the artificially lit clouds above. One of the first celestial objects that captivated me was the Moon and has since been a source of my inspiration. As a child, I asked numerous questions that were sparked by my interest in astronomy.</a>.</p>
-							<p>The adults in my life, while uneducated in astronomy and physics, highly encouraged me to pursue my passion outside of the classroom. I was consumed by thoughts of astronomy but faced with the reality of my limited resources. I was inspired to look for answers in my local libraries, educational programs on television as well as frequenting the American Museum of Natural History. In spite of my lack of exposure to physics and math in my early education, I was able to develop a deeper understanding of basic astronomy on my own.</p>
-							<p>While my rudimentary understanding of astronomy grew, my questions became more precise; “Where did the Moon come from? Where did the planets in our solar system come from?”, “Are there other planets out there?” or “What kind of planets can host life similar to Earth?”. These are the questions that continue to fuel my passion for astronomy. I am currently a Flatiron Research Fellow at the Flatiron Institute Center for Computational Astrophysics in NYC.</p>
-							<p>Some more details on my recent work can be found on my <a
-								href="#Research">Research page</a>. </p>
-								<p>Recently, my collaborators and I have become involved in the development of a light curve extraction and transit searching pipeline using data from the <a href="https://tess.gsfc.nasa.gov/">TESS</a> mission in order to find exoplanets that orbit cool, red stars. </p>
-						</article>
+			<!-- Main -->
+			<div id="main">
 
+				<!-- ═══════════════════════════════════════════════ ABOUT ══ -->
+				<article id="AboutMe">
+					<h2 class="major">About Me</h2>
+					<span class="image main"><img src="images/harlem.jpg" alt="East Harlem, NYC" /></span>
 
+					<p>Growing up in Spanish Harlem, New York City's light pollution denied me a clear view of the night sky — but it never stopped me from asking what lay beyond the steel and glass. The Moon was my first obsession, and from it came the questions that still drive my work: Where did the planets come from? Are there other worlds out there? Which of them could sustain an atmosphere, or even life?</p>
 
-						<!-- Research -->
-							<article id="Research">
-								<h2 class="major">Research</h2> 
-								<span class="image main"><img src="images/venus_transit.gif" alt="" /></span>
-								<center><b><font size="5"><a name="metal">NEMESIS: Exoplanet Transit Survey of Nearby M-Dwarfs in TESS FFIs I</a></b></font></center>
-<br>
-                <div class="col5">
-<br> <p> In recent years, interest in M-dwarf stars as hosts for planets has increased as the field of exoplanet discovery has grown. In this work, me and my collaborators have conducted a survey of over 33,000 stars within 100 parsecs of Earth that were observed by the Transiting Exoplanet Satellite Survey (TESS). In the two year TESS mission, the satellite surveys roughly 85% of the sky in two modes of observational cadence: once every 30 minutes and once every 2 minutes. Typically, only bright, isolated stars are pre-selected to be observed every 2 minutes by TESS which leaves a lot of M-dwarf stars, which are typically faint, observed with only 30 minute cadences. The lack of time resolution can make detection of planetary transits difficult but with our NEMESIS pipeline, we were able to detect 29 planet candidates, 24 of which are brand new detections!  Transit surveys like ours can give an empirical validation of how many planets are missed by using the 30 minute cadence data. <p>
+					<p>Those questions now constitute my research program. I am a <strong>Flatiron Research Fellow</strong> at the <a href="https://www.simonsfoundation.org/flatiron/center-for-computational-astrophysics/" target="_blank">Center for Computational Astrophysics (CCA)</a>, Flatiron Institute, NYC, working on an end-to-end observational framework to forecast atmosphere retention in nearby M-dwarf planetary systems.</p>
 
-          <p> You can find our work located at: <a href="https://arxiv.org/abs/2103.05647">Feliz et al. 2021</a>. All of our data products are available at <a href="https://filtergraph.com/NEMESIS">https://filtergraph.com/NEMESIS</a>. This particular project will always hold a special place in my heart as not only is this my 1st first-authored TESS based paper, I also got to share co-authorship with three undergraduates (Samantha Bianco, Mary Jimenez and Bryan Villarreal Alvarado) who this is also their first paper as authors! Without their help, this project would not have been possible. <p>
-          <p> Software and Tutorials coming soon! <p>
-                </div>
-                <div class="col6">
-<center><img src="images/NEMESIS.png" width=430>
-                 <br> Period-radius diagram of all confirmed transiting exoplanets and exoplanet candidates observed in TESS sectors 1 – 5 from Figure 9 of Feliz et al. 2021. <br>
+					<p>My approach combines three threads: (1) a completeness-controlled transit survey of M-dwarfs in TESS Full Frame Images (<a href="#Research">NEMESIS</a>); (2) multi-epoch stellar flare frequency distributions and activity evolution from TESS, K2, and ground-based photometry; and (3) Galactic-context characterization via Gaia kinematics and SDSS spectroscopic metallicities. The long-term output is a ranked, observation-ready target list for atmospheric characterization with JWST, Roman, and PLATO.</p>
 
-</p>
+					<p>Before joining the CCA, I was a Postdoctoral Researcher at the <a href="https://www.amnh.org/" target="_blank">American Museum of Natural History</a> (2022–2024), a Postdoctoral Researcher at Vanderbilt University (2022), and a Visiting Graduate Student Fellow at George Mason University (2021–2022). I completed my PhD in Astrophysics at Vanderbilt University in 2022 (advisor: Dr. Keivan Stassun), my M.A. in Physics at Fisk University in 2018, and my B.S. in Astrophysics at UMass Amherst in 2013.</p>
 
-<center><b><font size="5"><a name="metal">A Multi-Year Search For Transits Of Proxima Centauri</a></b></font></center>
-<br>
-		<div class="col5">
-<br> <p> Proxima Centauri has become the subject of intense study since the radial-velocity discovery by Anglada-Escud&eacute et al. 2016 of a planet orbiting this nearby M-dwarf every ~ 11.2 days. If Proxima Centauri b transits its host star, independent confirmation of its existence is possible, and its mass and radius can be measured in units of the stellar host mass and radius. There have been numerous independent surveys and analyses of the Proxima system in search of transit events. Using a global network of small telescopes, we have obtained light curves of Proxima Centauri at 329 observation epochs from 2006 - 2017. <p>
+					<!-- Stat bar -->
+					<div class="stat-bar">
+						<div class="stat"><span class="num" data-metric="papers"></span><span class="lbl">Refereed papers</span></div>
+						<div class="stat"><span class="num" data-metric="firstAuthor"></span><span class="lbl">First-author</span></div>
+						<div class="stat"><span class="num" data-metric="citations"></span><span class="lbl">Citations</span></div>
+						<div class="stat"><span class="num" data-metric="hIndex"></span><span class="lbl">h-index</span></div>
+						<div class="stat"><span class="num" data-metric="mentees"></span><span class="lbl">Mentees</span></div>
+					</div>
+					<p style="font-size:0.75em; opacity:0.55; margin-top:-0.8em;">Metrics via NASA ADS as of <span data-metric="adsDate"></span>.</p>
+				</article>
 
-          <p> In <a href="https://iopscience.iop.org/article/10.3847/1538-3881/aabded/meta">Blank et al. (2018)</a>, we analyzed 96 of our light curves that overlapped with predicted transit ephemerides from previously published tentative transit detections, and found no evidence in our data that would corroborate claims of transits with a period of 11.186 d. 
-In <a href="https://iopscience.iop.org/article/10.3847/1538-3881/ab184f/meta">Feliz et al. (2019)</a>,  we broaden our analysis, using 262 high-quality light curves from our data set to search for any periodic transit-like events over a range of periods from 1 - 30 days. 
-Specifically at the 11.186 d period and 5 millimagnitude transit depth, we rule out transits in our data with high confidence with a transit injection analysis.
-We are able to rule out virtually all transits of other planets at periods shorter than 5 days and depths greater than 3 millimagnitudes; however, we cannot confidently rule out transits at the period of Proxima b due to incomplete orbital phase coverage and a lack of sensitivity to transits shallower than 4 millimagnitudes. </p>
+				<!-- ══════════════════════════════════════════════ RESEARCH ══ -->
+				<article id="Research">
+					<h2 class="major">Research</h2>
+					<span class="image main"><img src="images/venus_transit.gif" alt="Venus transit animation" /></span>
 
-		</div> 
-		<div class="col6">
-<center><img src="images/ProxCenb.png" width=430>
-		 <br> An artist’s impression of Proxima Centauri b. Credit: ESO.                 <br>
+					<p>My research program asks a single driving question: <em>which nearby M-dwarf planets are most likely to retain an atmosphere, and how do we prioritize them for follow-up?</em> Answering it requires connecting planet detection, stellar activity history, and Galactic context into one coherent framework.</p>
 
-	</div>
-							</article>
+					<!-- Pillar 1 -->
+					<div class="pillar">
+						<h3>NEMESIS: Exoplanet Transit Survey of Nearby M-dwarfs in TESS FFIs
+							<span class="tag">Transit Survey</span>
+							<span class="tag">Pipeline</span>
+						</h3>
+						<p>The NEMESIS pipeline extracts light curves from TESS Full Frame Images (FFIs), removes instrumental systematics, and runs completeness-controlled periodic transit searches — targeting nearby M-dwarfs that are too faint or too crowded to be pre-selected as 2-minute TESS targets.</p>
 
-						<!-- Work -->
-							<article id="Media">
-								<h2 class="major">Media</h2>
-								<span class="image main"><img src="images/interview.jpeg" alt="" /></span>
-								<b><font size=5>Vanderbilt astronomers discover exceedingly rare star:</font><br></b>
-          <br>          <a href="https://www.vanderbilt.edu/evolution/vanderbilt-astronomers-discover-exceedingly-rare-star/">The Evolutionary Studies Initiative at Vanderbilt</a>
-          <br><br><br><br>
+						<p><strong>NEMESIS I</strong> (<a href="https://arxiv.org/abs/2103.05647" target="_blank">Feliz et al. 2021</a>): Survey of 33,000+ M-dwarfs within 100 pc in TESS Sectors 1–5. Detected 29 planet candidates, 24 of which were new detections not flagged by SPOC or QLP. One NEMESIS candidate is now the confirmed planet <strong>TOI-7384 b</strong> (Scott et al. 2026, MNRAS). Data products: <a href="https://filtergraph.com/NEMESIS" target="_blank">filtergraph.com/NEMESIS</a>.</p>
 
-          <b><font size=5>Mentorship through the  Central American-Caribbean Bridge Program with Bryan Villarreal Alvarado:</font><br></b>
-          <br>          <a href="https://thecostaricanews.com/bryan-villarreal-alvarado-guanacaste-exoplanet-hunter-on-the-search-for-alien-worlds/">Bryan Villarreal Alvarado: Guanacaste Exoplanet Hunter on the Search for Alien Worlds</a>
-          <br><br><br><br>
+						<p><strong>NEMESIS II</strong> (in prep.): Scale-up to the full TESS primary mission. Current yield: 6,300+ threshold crossing events (SNR &gt; 10), with early automated vetting producing ~150 new planet candidates. The pipeline now incorporates odd-even depth comparisons, centroid motion tests, and a/R<sub>★</sub> cuts. Based on our detection efficiency from NEMESIS I, we expect ~120 CTOIs for the full primary mission, supplementing the ~500 M-dwarf TOIs currently in the ExoFOP catalog.</p>
 
-
-          <b><font size=5>My First Mentorship Experience with Samantha Bianco:</font><br></b>
-          <br>
-          <a href="https://news.vanderbilt.edu/2021/01/25/students-fascination-with-astronomy-inspires-first-completed-immersion-vanderbilt-project/">Student’s fascination with astronomy inspires first completed Immersion Vanderbilt project</a> Through Vanderbilt's Immersion program, I worked with undergraduate student Samantha Bianco to search for transiting exoplanets with TESS data. In the history of Vanderbilt University, Samantha is the first student to submit a completed project. So proud!
-          <br><br><br><br>
-
-
-          <b><font size=5>AU Microscopii b:</font><br></b>
-          <br>
-          <a href="https://news.vanderbilt.edu/2020/06/24/vanderbilt-astronomers-among-nasas-tess-mission-team-to-discover-a-rare-newly-formed-planet/">A summary of the discovery of AU Mic b.</a> My advisor, Keivan Stassun and I were among the astronomers on the team that helped discover this planet.
-          <br><br><br><br>
-
-	  <b><font size=5>Proxima Centauri:</font><br></b>
-	  <br>
-	  <a href="https://room.eu.com/news/proxima-centauri-may-host-a-second-exoplanet-but-its-first-might-not-be-there">A conversation</a> about the difficulty of detecting and confirming the existence of the planet Proxima Centauri b. 
-	  <br><br><br><br>
-	  
-<b><font size=5>World Meet Dax:</font><br></b>
-	  <a href="https://www.east-harlem.com/index.php/News/view/world_meet_dax/">My very first interview!</a> 
-	  <br><br>
-	  <br>
-							</article>
-
-						<!-- Outreach -->
-							<article id="Outreach">
-								<h2 class="major">Outreach</h2>
-								<span class="image main"><img src="images/outreach.png" alt="" /></span>
-								<center><b><font size="12"><a name="Mentoring">Mentorship Experience</a></b></font></center> <p><br><br>
-
-								<center><b><font size="6"><a name="CUNYMS">CUNY Master’s in Astrophyiscs, Bridge Thesis Project</a></b></font></center>									
-									<center> Celestial Fireworks: Using TESS Photometry and SDSS Spectra to Uncover Stellar Eruptions, 2024 – Present  <br>
-										Graduate Student: Andrea Bracamonte, City University of New York Graduate Center, Co-Advised with Dr. Ruth Angus. <p>
-									
-								<center><b><font size="6"><a name="BSRIP">Barnard Summer Research Institute Program</a></b></font></center>
-									<center> Project: Detection and Validation of Transiting Exoplanets Around Nearby M-dwarf Stars, Summer 2024. <br>
-										College Student: Madeline J. Maldonado Gutierrez, Barnard College of Columbia University.<p>
-									
-								<center><b><font size="6"><a name="SRMP">AMNH Science Research Mentorship Program</a></b></font></center>
-									<center> Project: Detection of Transiting Exoplanets and Eclipsing Binaries Around Nearby M-dwarf Star, Fall 2023 – Summer 2024. <br>
-										High School Students: Thamim Chowdhury, Shreeya KC, Kylor Ghai.<p>
-
-								<center><b><font size="6"><a name="CUNYMS">CUNY Master’s in Astrophyiscs, Bridge Thesis Project</a></b></font></center>
-									<center> Project: Using Gaussian Processes to model stellar rotation in Zwicky Transient Facility photometry, Fall 2022 – Spring 2024. <br>
-										Graduate Student: Ryan Lebron, City University of New York Graduate Center. Co-advised with Dr. Ruth Angus. <p>											
-																	
-								<center><b><font size="6"><a name="SRMP">AMNH Science Research Mentorship Program</a></b></font></center>
-									<center> Project: Detection of Transiting Exoplanets and Eclipsing Binaries Around Nearby M-dwarf Star, Fall 2022 – Summer 2023. <br>
-										High School Students: August Fischer, Donovan Bradley, Jashcelyn Canada.<p>
-								
-									<center><b><font size="6"><a name="CACBP">Central American Caribbean Bridge Program</a></b></font></center>
-									<center> Project: Recovery of known TESS Objects of Interest from Full Frame Images of TESS observations, Spring 2020 – Spring 2021. <br>
-										College Student: Bryan Villarreal Alvarado, University of Costa Rica.<p>
-
-									<center><b><font size="6"><a name="SRI">Summer Research Internship</a></b></font></center>
-									<center> Project: Transiting Exoplanet Survey Satellite: A Search for New Worlds, Summer 2019 – Spring 2021. 
-									<br>
-									College Student: Samantha Bianco, Vanderbilt University, co-mentored with Dr. Keivan Stassun. <p>	
-											
-									<center><b><font size="6"><a name="SRI">Summer Research Internship</a></b></font></center>
-									<center> Project: Blind Transit Survey of TESS Data for M Dwarf Systems, Summer 2019 – Spring 2020. 
-									<br>
-									College Student: Mary Jimenez, George Mason University, co-menthored with Dr. Peter Plavchan.<p>
-
-									<center><b><font size="6"><a name="SSMV">School for Science and Math at Vanderbilt</a></b></font></center>
-									<center> Project: Detecting exoplanet transits in TESS light curves, Spring 2019.
-									<br>
-									High School Student: Felix Bean, Hunter’s Lane High School. <p>	
-
-								<center><b><font size="12"><a name="Teaching">Teaching Experience</a></b></font></center>
-								<p><br><br>
-										
-									<center><b><font size="6"><a name="TA">Teaching Assistant, Introductory Astronomy Laboratory, Vanderbilt University</a></b></font></center>
-									<center> The lab meets once a week for 3 hours to work on either computer-based or observing labs. The aims of this class is to gain a familiarity with the night sky, perform observations of planets and stars, and to learn how astronomers may draw conclusions from and figure out the limitations of observations. 
-									<br>
-									Fall 2018 -- Spring 2020.
-									<p><br><br>
-
-
-									<center><b><font size="6"><a name="LabTech">Laboratory Technician / Teaching Assistant, Electronics Laboratory, Bronx Community College</a></b></font></center>
-									<center> In this course students are taught the characteristics of amplifiers using op-amps with respect to amplification, dB frequency response, and input and output impedance. Op-amp applications are introduced with emphasis on the uses of these devices in the telecommunications industry. Electrooptical devices, power supplies, and switches are studied. The frequency response of passive networks and amplifiers is measured. Analysis by computer simulations is stressed. 
-										<br>
-										Spring, 2014 -- Fall, 2015. 
-										<p><br><br>
-
-									<center><b><font size="12"><a name="Outreach">Outreach</a></b></font></center>
-									<p><br><br>
-											
-										<center><b><font size="6"><a name="EHTP">East Harlem Tutorial Program, New York, NY</a></b></font></center>
-										<center> Tutored and mentored many high-school and middle school students in math, science and the college application process. 2008 -- 2010
-										<p><br>
-											
-										<center><b><font size="6"><a name="EHTP">East Harlem Scholar's Academy, New York, NY: Alumni Day Speaker</a></b></font></center>
-										<center> Answering questions of elementary school students about astronomy and physics and my research experience, 2010 -- 2015.											
-										<p><br>
-											
-										<center><b><font size="6"><a name="CPEHS">Central Park East High School, New York, NY: College Panel Speaker</a></b></font></center>
-										<center> Answering questions of high-school students about the my experiences in science and in higher education, 2009 -- 2013.
-										<p><br>
-											
-										<center><b><font size="6"><a name="FIRST">Central Park East High School, New York, NY: Robotics Consultant</a></b></font></center>
-										<center> Volunteered to assist high school students with building a robot in the FIRST Robotics Competition, 2009 -- 2011.			
-										<p><br>
-									
-
-							</article>
-							<!-- Talks -->
-							<article id="Talks">
-								<h2 class="major">Talks</h2> 
-								<span class="image main"><img src="images/talks.png" alt="" /></span>
-								<center><b><font size="5">My PhD Dissertation Defense at Vanderbilt University (45 minute talk)</b></font></center>
-								<center><a href="https://docs.google.com/presentation/d/15jjKUEuv1ONYANmF675_grRvDzSPPTF2G5Gio9KS_Ak/edit?usp=sharing"> Link to Defense Slides!</a></center>
-								<p><br> 
-
-								<center><b><font size="5">TESS Science Meeting #25 Presentation of NEMESIS Pipeline (10 minute talk)</b></font></center>
-								<video controls width="450" height="300">
-								<source src="Talks/DaxFeliz_TESS_SM_25_talk.mp4" type="video/mp4">
-								Your browser does not support MP4 videos, change browser to view video.
-								</video>
-								<p><br>
-	
-								<center><b><font size="5">Vanderbilt/MIT Presentation of NEMESIS Pipeline (50 minute talk)</b></font></center>
-								<center> <a href="Talks/DaxFeliz_AJC_Spring2021.webm" download="DaxFeliz_AJC_Spring2021.webm" target="DaxFeliz_AJC_Spring2021.webm"> Vanderbilt/MIT Presentation of NEMESIS Pipeline (50 minute talk, Click Link To Download) </a>
-								<p><br>
-
-								<center><b><font size="5">NEMESIS: Exoplanet Transit Survey of Nearby M-dwarfs in TESS FFIS I</b></font></center>
-								<center> <a href="Talks/DaxFeliz_CoolStars_20.5_Poster.pdf">Cool Stars 20.5 Virtual Conference, March 2021</a>
-								<p><br>
-
-								<center><b><font size="5">A Multi-Year Transit Search of Proxima Centauri</b></font></center>
-								<center> <a href="Talks/DaxFeliz_Masters_Defense.pdf">Master’s Thesis Defense, Fisk University, August 2018</a>
-								<p><br>
-
-								<center><b><font size="5">A Decade Long Transit Search for Proxima Centauri b</b></font></center>
-								<center> <a href="Talks/DaxFeliz_ERES_III.pdf">Emerging Researchers in Exoplanet Science (ERES) Symposium, Yale University, Summer 2017</a>
-								<p><br>		
-									
-								<center><b><font size="5">A Multi-Year Transit Search for Proxima Centauri b</b></font></center>
-								<center> <a href="Talks/DaxFeliz_KELT_Workshop_2017.pdf">KELT Workshop, Leigh University, Summer 2017</a>
-								<p><br>
-						  
-								<center><b><font size="5">A Multi-Year Transit Search for Proxima Centauri b</b></font></center>
-								<center> <a href="Talks/DaxFeliz_Sagan_2017_POP.pdf">Sagan Summer Workshop, California Institute of Technology POP Talk, Summer 2017</a>
-								<p><br>						    
-	
-							</article>
-
-
-						</article>
-						<!-- Workshops -->
-						<article id="Workshops">
-							<h2 class="major">Workshops</h2> 
-							<span class="image main"><img src="images/workshop.jpeg" alt="" /></span>
-							
-							<center><b><font size="5">City University of New York (CUNY) Bridge Programming Bootcamp</b></font></center>
-							<center><a href="https://daxfeliz.github.io/cunybridgebootcamp/"> Link to Bootcamp!</a></center>
-							<p><br>
-
-						</article>							
-
-
-
-							</article>
-
-						<!-- Contact -->
-							<article id="Contact">
-								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
-								<ul class="icons">
-									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</article>
-
-						<!--
-						<!-- Elements -->
-							<article id="elements">
-								<h2 class="major">Elements</h2>
-
-								<section>
-									<h3 class="major">Text</h3>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h4>Blockquote</h4>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h4>Preformatted</h4>
-									<pre><code>i = 0;
-						-->
-														
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
-
-								<section>
-									<h3 class="major">Lists</h3>
-
-									<h4>Unordered</h4>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
-
-									<h4>Alternate</h4>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
-
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
-									<h4>Icons</h4>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-									</ul>
-
-									<h4>Actions</h4>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</section>
-
-								<section>
-									<h3 class="major">Table</h3>
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
-
-								<section>
-									<h3 class="major">Buttons</h3>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Primary</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button primary disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
-
-								<section>
-									<h3 class="major">Form</h3>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="demo-name">Name</label>
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-											</div>
-											<div class="field half">
-												<label for="demo-email">Email</label>
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-											</div>
-											<div class="field">
-												<label for="demo-category">Category</label>
-												<select name="demo-category" id="demo-category">
-													<option value="">-</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-												<label for="demo-priority-low">Low</label>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-high" name="demo-priority">
-												<label for="demo-priority-high">High</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-copy" name="demo-copy">
-												<label for="demo-copy">Email me a copy</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-human" name="demo-human" checked>
-												<label for="demo-human">Not a robot</label>
-											</div>
-											<div class="field">
-												<label for="demo-message">Message</label>
-												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
-
-							</article>
-
+						<center><img src="images/NEMESIS.png" width="400" style="margin:0.8em 0;" alt="NEMESIS period-radius diagram" /><br>
+						<small>Period–radius diagram of TESS planet candidates from NEMESIS I (Feliz et al. 2021).</small></center>
 					</div>
 
-				<!-- Footer -->
-					<!-- <footer id="footer">
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer> -->
+					<!-- Pillar 2 -->
+					<div class="pillar">
+						<h3>Stellar Flare Activity &amp; Evolution
+							<span class="tag">Flares</span>
+							<span class="tag">Time-Domain</span>
+						</h3>
+						<p>Stellar flares are not just nuisances for transit searches — they are the primary record of a star's historical XUV output and thus the dominant driver of atmospheric escape. I am building multi-epoch flare frequency distributions (FFDs) for nearby M-dwarfs using TESS, K2, and ground-based photometry, with the goal of reconstructing each star's cumulative high-energy irradiation history.</p>
 
-			</div>
+						<p>Related work includes a <strong>NASA TESS Guest Investigator Cycle 9 proposal</strong> (PI: D. L. Feliz, under review): <em>Long-Term Evolution of M-dwarf Flare Activity with K2, TESS, and Ground-Based Photometry</em>. I am also a member of the <strong>ESA PLATO Flare Removal Working Group</strong> (2020–present), developing algorithms to detect and remove flare signatures from PLATO photometric time series.</p>
+
+						<p>Collaborative contributions: Paudel et al. 2024 (multiwavelength TESS/K2/Swift/HST M-dwarf flare survey); Cool Stars 22 poster on photometric activity cycles in M-dwarfs (<a href="https://zenodo.org/records/13146889" target="_blank">Zenodo</a>).</p>
+					</div>
+
+					<!-- Pillar 3 -->
+					<div class="pillar">
+						<h3>Atmosphere Retention Metric (ARM)
+							<span class="tag">JWST / Roman / PLATO Targets</span>
+							<span class="tag">In Progress</span>
+						</h3>
+						<p>The ARM framework combines the output of NEMESIS (planet catalog with completeness characterization) and the flare activity program (per-star XUV history) with Gaia-derived kinematics and SDSS spectroscopic metallicities to compute a per-planet probability of retaining an atmosphere. The result is a ranked, completeness-aware target list for transmission spectroscopy follow-up with JWST, Roman, and PLATO.</p>
+
+						<p>Key ingredients: per-planet escape velocity estimates (from mass–radius relations, anchored by RV follow-up where available), completeness-corrected flare rate priors from multi-epoch FFDs, and Galactic age context from Gaia kinematics. Graduate student Andrea Bracamonte (CUNY/CCA) is building the CME detection and spectroscopic efficiency framework that feeds into the ARM flare priors.</p>
+					</div>
+
+					<!-- Proxima -->
+					<div class="pillar">
+						<h3>A Multi-Year Transit Search of Proxima Centauri</h3>
+						<p>Using 329 ground-based light curves spanning 2006–2017, we searched for transit events of the candidate planet Proxima Centauri b (P ≈ 11.2 d, depth ≈ 5 mmag). In <a href="https://iopscience.iop.org/article/10.3847/1538-3881/aabded/meta" target="_blank">Blank et al. 2018</a> (corresponding author: Feliz) we found no corroborating evidence for previously claimed transit epochs. In <a href="https://iopscience.iop.org/article/10.3847/1538-3881/ab184f/meta" target="_blank">Feliz et al. 2019</a> we extended the analysis to 262 high-quality light curves over P = 1–30 d, ruling out transits at the 11.186 d period with high confidence via transit injection-recovery.</p>
+						<center><img src="images/ProxCenb.png" width="380" style="margin:0.8em 0;" alt="Artist's impression of Proxima Centauri b" /><br>
+						<small>Artist's impression of Proxima Centauri b. Credit: ESO.</small></center>
+					</div>
+				</article>
+
+				<!-- ══════════════════════════════════════════════ PUBLICATIONS ══ -->
+				<article id="Publications">
+					<h2 class="major">Publications</h2>
+
+					<p style="font-size:0.9em;"><span data-metric="papers"></span> refereed papers · <span data-metric="firstAuthor"></span> first-author · <span data-metric="citations"></span> citations · h-index <span data-metric="hIndex"></span> (NASA ADS, <span data-metric="adsDate"></span>).<br>
+					Full list: <a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Feliz%2C+Dax%22&sort=date+desc" target="_blank">NASA ADS</a> &nbsp;|&nbsp; <a href="https://orcid.org/0000-0002-2457-7889" target="_blank">ORCID 0000-0002-2457-7889</a></p>
+
+					<div class="pub-section">
+						<h3>First-Author Refereed Publications</h3>
+						<ol class="pubs">
+							<li><strong>Dax L. Feliz</strong>, Peter Plavchan, Samantha N. Bianco, et al.
+								NEMESIS: Exoplanet Transit Survey of Nearby M-dwarfs in TESS FFIs. I.
+								<em>The Astronomical Journal</em>, 161(5):247, May 2021.
+								<a href="https://arxiv.org/abs/2103.05647" target="_blank">[arXiv]</a></li>
+							<li><strong>Dax L. Feliz</strong>, David L. Blank, Karen A. Collins, et al.
+								A Multi-year Search for Transits of Proxima Centauri. II. No Evidence for Transit Events with Periods between 1 and 30 days.
+								<em>The Astronomical Journal</em>, 157(6):226, Jun 2019.
+								<a href="https://iopscience.iop.org/article/10.3847/1538-3881/ab184f/meta" target="_blank">[Journal]</a></li>
+							<li>David L. Blank, <strong>Dax L. Feliz</strong>** (corresponding author), Karen A. Collins, et al.
+								A Multi-year Search for Transits of Proxima Centauri. I. Light Curves Corresponding to Published Ephemerides.
+								<em>The Astronomical Journal</em>, 155(6):228, Jun 2018.
+								<a href="https://iopscience.iop.org/article/10.3847/1538-3881/aabded/meta" target="_blank">[Journal]</a></li>
+						</ol>
+
+						<h3>Key Collaborative Publications</h3>
+						<ol class="pubs">
+							<li>Peter Plavchan, Thomas Barclay, Jonathan Gagné, …, <strong>Dax Feliz</strong>, et al.
+								A planet within the debris disk around the pre-main-sequence star AU Microscopii.
+								<em>Nature</em>, 582(7813):497–500, June 2020.
+								<a href="https://doi.org/10.1038/s41586-020-2400-z" target="_blank">[Journal]</a></li>
+							<li>Heike Rauer, Conny Aerts, Cabrera, …, <strong>D. L. Feliz</strong>, et al.
+								The PLATO mission.
+								<em>Experimental Astronomy</em>, 59(3):26, June 2025.
+								<a href="https://arxiv.org/abs/2406.05447" target="_blank">[arXiv]</a></li>
+							<li>Karen A. Collins, Kevin I. Collins, Joshua Pepper, …, <strong>Dax L. Feliz</strong>, et al.
+								The KELT Follow-up Network and Transit False-positive Catalog: Pre-vetted False Positives for TESS.
+								<em>The Astronomical Journal</em>, 156(5):234, Nov 2018.
+								<a href="https://doi.org/10.3847/1538-3881/aae582" target="_blank">[Journal]</a></li>
+						</ol>
+
+						<h3>Selected Peer-Reviewed Publications (N<sup>th</sup> Author)</h3>
+						<p style="font-size:0.82em; opacity:0.65; margin-top:-0.6em; margin-bottom:0.8em;">
+							Curated for thematic relevance to M-dwarf exoplanet detection, stellar activity, and time-domain photometry.
+							<a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Feliz%2C+Dax%22&sort=date+desc" target="_blank">Full list of 31 papers on NASA ADS.</a>
+						</p>
+						<ol class="pubs">
+							<!-- PINNED: confirms NEMESIS I candidate TOI-7384 b — keep at top regardless of future additions -->
+							<li>Madison G. Scott, Georgina Dransfield, Mathilde Timmermans, …, <strong>Dax L. Feliz</strong>, et al.
+								Two temperate Earth- and Neptune-sized planets orbiting fully convective M dwarfs.
+								<em>MNRAS</em>, January 2026.
+								<a href="https://arxiv.org/abs/2601.05799" target="_blank">[arXiv]</a>
+								<em style="opacity:0.6;"> — Confirms NEMESIS I candidate TOI-7384 b.</em></li>
+							<li>Rishi R. Paudel, Thomas Barclay, Allison Youngblood, …, <strong>Dax L. Feliz</strong>, et al.
+								A Multiwavelength Survey of Nearby M Dwarfs: Optical and Near-ultraviolet Flares and Activity with Contemporaneous TESS, Kepler/K2, Swift, and HST Observations.
+								<em>ApJ</em>, 971(1):24, August 2024.
+								<a href="https://doi.org/10.3847/1538-4357/ad487d" target="_blank">[Journal]</a></li>
+							<li>Lionel J. Garcia, Daniel Foreman-Mackey, Catriona A. Murray, …, <strong>Dax L. Feliz</strong>, et al.
+								nuance: Efficient Detection of Planets Transiting Active Stars.
+								<em>AJ</em>, 167(6):284, June 2024.
+								<a href="https://arxiv.org/abs/2402.06835" target="_blank">[arXiv]</a></li>
+							<li>Justin M. Wittrock, Peter P. Plavchan, Bryson L. Cale, …, <strong>Dax L. Feliz</strong>, et al.
+								Validating AU Microscopii d with Transit Timing Variations.
+								<em>AJ</em>, 166(6):232, December 2023.
+								<a href="https://arxiv.org/abs/2302.04922" target="_blank">[arXiv]</a></li>
+							<li>Ian Stotesbury, Billy Edwards, …, <strong>Dax L. Feliz</strong>, et al.
+								Twinkle: a small satellite spectroscopy mission for the next phase of exoplanet science.
+								<em>SPIE</em>, 12180:1218033, August 2022.
+								<a href="https://arxiv.org/abs/2209.03337" target="_blank">[arXiv]</a></li>
+							<li>Justin M. Wittrock, Stefan Dreizler, Michael A. Reefe, Brett M. Morris, …, <strong>D. L. Feliz</strong>, et al.
+								Transit Timing Variations for AU Microscopii b and c.
+								<em>AJ</em>, 164(1):27, July 2022.
+								<a href="https://arxiv.org/abs/2202.05813" target="_blank">[arXiv]</a></li>
+							<li>Christina Hedges, Alex Hughes, George Zhou, …, <strong>D. L. Feliz</strong>, et al.
+								TOI-2076 and TOI-1807: Two Young, Comoving Planetary Systems within 50 pc Identified by TESS.
+								<em>AJ</em>, 162(2):54, August 2021.
+								<a href="https://doi.org/10.3847/1538-3881/ac06cd" target="_blank">[Journal]</a></li>
+							<li>Heike Rauer, Conny Aerts, …, <strong>D. L. Feliz</strong>, et al.
+								The PLATO mission.
+								<em>Experimental Astronomy</em>, 59(3):26, June 2025.
+								<a href="https://arxiv.org/abs/2406.05447" target="_blank">[arXiv]</a>
+								<em style="opacity:0.6;"> — ESA PLATO Flare Removal Working Group member.</em></li>
+						</ol>
+						<p style="font-size:0.8em; opacity:0.6; margin-top:0.4em;">See <a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Feliz%2C+Dax%22&sort=date+desc" target="_blank">NASA ADS</a> for the complete list of 31 papers.</p>
+					</div>
+				</article>
+
+				<!-- ═══════════════════════════════════════════════ TALKS ══ -->
+				<article id="Talks">
+					<h2 class="major">Talks &amp; Presentations</h2>
+					<span class="image main"><img src="images/talks.png" alt="" /></span>
+
+					<p>Selected invited and contributed talks. Full record in <a href="CV/Dax_Feliz_CV.pdf" target="_blank">CV</a>.</p>
+
+					<h3 style="border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:0.3em;">Invited Colloquia &amp; Seminars</h3>
+
+					<div class="talk-entry">
+						<span class="talk-badge">Invited</span>
+						<span class="talk-title">From Exoplanet Detections to Atmosphere Forecasts Around Nearby M-Dwarfs</span><br>
+						<span class="talk-meta">Job Talk / Departmental Seminar · NYC College of Technology Physics Dept., February 2026 &nbsp;
+						<a href="Talks/DaxFeliz_JobTalk_2026.pdf" target="_blank">[Slides]</a></span>
+					</div>
+
+					<div class="talk-entry">
+						<span class="talk-badge">Invited</span>
+						<span class="talk-title">NEMESIS I: Exoplanet Transit Survey of Nearby M-dwarfs in TESS FFIs I</span><br>
+						<span class="talk-meta">
+							MIT TESS Science Talk (Mar 2021) ·
+							Rubin LSST TVS Seminar (Jun 2021) ·
+							Center for Exoplanets &amp; Habitable Worlds Seminar, Penn State (Sep 2021)
+						</span>
+					</div>
+
+					<h3 style="border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:0.3em; margin-top:1.4em;">Invited Conference &amp; Workshop Talks</h3>
+
+					<div class="talk-entry">
+						<span class="talk-badge">Invited</span>
+						<span class="talk-title">NEMESIS II: Exoplanet Transit Survey of Nearby M-dwarfs in TESS FFIs</span><br>
+						<span class="talk-meta">
+							Emerging Researchers in Exoplanets (ERES) X, Princeton University (Jun 2025) ·
+							"From Trends to Transits" Workshop, University of New Mexico (Aug 2025)
+						</span>
+					</div>
+
+					<div class="talk-entry">
+						<span class="talk-badge">Invited</span>
+						<span class="talk-title">M-dwarfs are cool!</span><br>
+						<span class="talk-meta">AstroFest, Flatiron CCA, September 2024 &amp; September 2025</span>
+					</div>
+
+					<div class="talk-entry">
+						<span class="talk-badge">Invited</span>
+						<span class="talk-title">Twinkle, Twinkle Little Star</span><br>
+						<span class="talk-meta">Twinkle and the Next Generation of Exoplanet Scientists Conference, September 2021</span>
+					</div>
+
+					<h3 style="border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:0.3em; margin-top:1.4em;">Contributed Talks &amp; Posters</h3>
+
+					<div class="talk-entry">
+						<span class="talk-badge">Contributed</span>
+						<span class="talk-title">NEMESIS II: Exoplanet Transit Survey of Nearby M-dwarfs in TESS FFIs</span><br>
+						<span class="talk-meta">
+							TESS Science Conference III, MIT (Jul 2024) <a href="https://zenodo.org/records/12973447" target="_blank">[Zenodo]</a> ·
+							Sagan Summer Workshop, Caltech (Jul 2025) <a href="https://nexsci.caltech.edu/workshop/2025/posters/Poster_DaxFeliz_101.pdf" target="_blank">[Poster]</a>
+						</span>
+					</div>
+
+					<div class="talk-entry">
+						<span class="talk-badge">Poster</span>
+						<span class="talk-title">Can Photometric Flares Be Used To Identify Activity Cycles in M-dwarf Stars?</span><br>
+						<span class="talk-meta">Cool Stars 22 (Jul 2024) <a href="https://zenodo.org/records/13146889" target="_blank">[Zenodo]</a></span>
+					</div>
+
+					<div class="talk-entry">
+						<span class="talk-badge">Poster</span>
+						<span class="talk-title">NEMESIS I: Exoplanet Transit Survey of Nearby M-dwarfs in TESS FFIs I</span><br>
+						<span class="talk-meta">
+							Cool Stars 20.5 (Mar 2021) <a href="http://doi.org/10.5281/zenodo.4562794" target="_blank">[Zenodo]</a> ·
+							TESS Science Conference II (Aug 2021) <a href="http://doi.org/10.5281/zenodo.5115302" target="_blank">[Zenodo]</a>
+						</span>
+					</div>
+
+					<h3 style="border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:0.3em; margin-top:1.4em;">Dissertation &amp; Thesis Defenses</h3>
+
+					<div class="talk-entry">
+						<span class="talk-badge">Defense</span>
+						<span class="talk-title">PhD Dissertation Defense, Vanderbilt University</span><br>
+						<span class="talk-meta"><a href="https://docs.google.com/presentation/d/15jjKUEuv1ONYANmF675_grRvDzSPPTF2G5Gio9KS_Ak/edit?usp=sharing" target="_blank">[Slides]</a></span>
+					</div>
+
+					<div class="talk-entry">
+						<span class="talk-badge">Defense</span>
+						<span class="talk-title">A Multi-Year Transit Search of Proxima Centauri — Master's Thesis Defense, Fisk University</span><br>
+						<span class="talk-meta">August 2018 &nbsp;<a href="Talks/DaxFeliz_Masters_Defense.pdf" target="_blank">[Slides]</a></span>
+					</div>
+
+					<h3 style="border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:0.3em; margin-top:1.4em;">Recorded Talks</h3>
+					<p style="font-size:0.9em;">TESS Science Meeting #25 — NEMESIS Pipeline (10 min)</p>
+					<video controls width="100%" style="max-width:480px;">
+						<source src="Talks/DaxFeliz_TESS_SM_25_talk.mp4" type="video/mp4">
+						Your browser does not support MP4 video.
+					</video>
+				</article>
+
+				<!-- ══════════════════════════════════════════════ MENTORING ══ -->
+				<article id="Mentoring">
+					<h2 class="major">Mentoring</h2>
+
+					<p>I have mentored 14 students across high school, undergraduate, and graduate levels. Projects span exoplanet transit detection, stellar flare analysis, and time-series modeling. Trainees have advanced to PhD programs, staff scientist positions, and industry roles.</p>
+
+					<h3 style="border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:0.3em;">Graduate Students</h3>
+
+					<div class="mentee-block">
+						<span class="level-tag">CUNY Master's · CCA · 2024–Present</span>
+						<p><strong>Andrea Bracamonte</strong>, CUNY Graduate Center</p>
+						<p>Searching for M-dwarf Coronal Mass Ejections with TESS and SDSS-V. Co-advised with Dr. Ruth Angus.</p>
+						<p class="outcome">Project feeds CME detection framework and flare-rate priors into the NEMESIS ARM program.</p>
+					</div>
+
+					<div class="mentee-block">
+						<span class="level-tag">CUNY Master's · AMNH/CCA · 2022–2024</span>
+						<p><strong>Ryan Lebron</strong>, CUNY Graduate Center</p>
+						<p>Using Gaussian Processes to model stellar rotation in Zwicky Transient Facility photometry. Co-advised with Dr. Ruth Angus.</p>
+						<p class="outcome">GP-derived rotation period catalog used as stellar activity priors in NEMESIS ARM.</p>
+					</div>
+
+					<h3 style="border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:0.3em; margin-top:1.4em;">Undergraduate Students</h3>
+
+					<div class="mentee-block">
+						<span class="level-tag">Barnard Summer Research Institute · AMNH · 2024</span>
+						<p><strong>Madeline J. Maldonado Gutierrez</strong>, Barnard College of Columbia University</p>
+						<p>Detection and Validation of Transiting Exoplanets Around Nearby M-dwarf Stars.</p>
+					</div>
+
+					<div class="mentee-block">
+						<span class="level-tag">AMNH REU · 2023</span>
+						<p><strong>Maliyah Adams</strong>, Arizona State University</p>
+						<p>Detecting Exoplanets Around Nearby M-dwarf Stars from the Revised TESS Habitable Zone Catalog.</p>
+					</div>
+
+					<div class="mentee-block">
+						<span class="level-tag">Central American-Caribbean Bridge Program · 2020–2021</span>
+						<p><strong>Bryan Villarreal Alvarado</strong>, Universidad de Costa Rica</p>
+						<p>Recovery of known TESS Objects of Interest from TESS FFIs.</p>
+						<p class="outcome">Co-author on Feliz et al. 2021. <a href="https://thecostaricanews.com/bryan-villarreal-alvarado-guanacaste-exoplanet-hunter-on-the-search-for-alien-worlds/" target="_blank">Press coverage</a>.</p>
+					</div>
+
+					<div class="mentee-block">
+						<span class="level-tag">Summer Research Internship · Vanderbilt · 2019–2021</span>
+						<p><strong>Samantha N. Bianco</strong>, Vanderbilt University (co-mentored with Dr. Keivan Stassun)</p>
+						<p>TESS transit survey of M-dwarf stars.</p>
+						<p class="outcome">Co-author on Feliz et al. 2021. First student to complete an Immersion Vanderbilt project. Now at STScI. <a href="https://news.vanderbilt.edu/2021/01/25/students-fascination-with-astronomy-inspires-first-completed-immersion-vanderbilt-project/" target="_blank">Press coverage</a>.</p>
+					</div>
+
+					<div class="mentee-block">
+						<span class="level-tag">Summer Research Internship · Vanderbilt · 2019–2020</span>
+						<p><strong>Mary Jimenez</strong>, George Mason University (co-mentored with Dr. Peter Plavchan)</p>
+						<p>Blind transit survey of TESS data for M-dwarf systems.</p>
+						<p class="outcome">Co-author on Feliz et al. 2021.</p>
+					</div>
+
+					<h3 style="border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:0.3em; margin-top:1.4em;">High School Students</h3>
+
+					<div class="mentee-block">
+						<span class="level-tag">AMNH Science Research Mentoring Program · 2023–2024</span>
+						<p><strong>Thamim Chowdhury, Shreeya KC, Kylor Ghai</strong></p>
+						<p>Detection of Transiting Exoplanets and Eclipsing Binaries Around Nearby M-dwarf Stars.</p>
+					</div>
+
+					<div class="mentee-block">
+						<span class="level-tag">AMNH Science Research Mentoring Program · 2022–2023</span>
+						<p><strong>August Fischer, Donovan Bradley, Jashcelyn Canada</strong></p>
+						<p>Detection of Transiting Exoplanets and Eclipsing Binaries Around Nearby M-dwarf Stars.</p>
+					</div>
+
+					<div class="mentee-block">
+						<span class="level-tag">School for Science and Math at Vanderbilt · 2019</span>
+						<p><strong>Felix Bean</strong>, Hunter's Lane High School</p>
+						<p>Detecting exoplanet transits in TESS light curves.</p>
+					</div>
+				</article>
+
+				<!-- ══════════════════════════════════════════════ OUTREACH ══ -->
+				<article id="Outreach">
+					<h2 class="major">Outreach &amp; Service</h2>
+					<span class="image main"><img src="images/outreach.png" alt="" /></span>
+
+					<h3 style="border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:0.3em;">Professional Service</h3>
+					<p><strong>Member</strong>, ESA PLATO Flare Removal Working Group, 2020–Present</p>
+					<p><strong>Instructor &amp; Curriculum Developer</strong>, <a href="https://daxfeliz.github.io/cunybridgebootcamp/" target="_blank">CUNY Master's in Astrophysics Bridge Programming Bootcamp</a>, 2022–Present. Annual two-week graduate onboarding bootcamp; ~10–15 students per cohort.</p>
+
+					<h3 style="border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:0.3em; margin-top:1.4em;">Teaching</h3>
+					<p><strong>Teaching Assistant</strong>, Introductory Astronomy Laboratory, Vanderbilt University, Fall 2018–Spring 2020.</p>
+					<p><strong>Laboratory Technician / Teaching Assistant</strong>, Electronics Laboratory, Bronx Community College, Spring 2014–Fall 2015.</p>
+
+					<h3 style="border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:0.3em; margin-top:1.4em;">Community Outreach</h3>
+					<p><strong>East Harlem Scholars Academy, NYC</strong> — Alumni Day Speaker, 2010–2015. Astronomy and physics Q&amp;A for elementary school students.</p>
+					<p><strong>Central Park East High School, NYC</strong> — College Panel Speaker, 2009–2013; Robotics Consultant (FIRST Robotics Competition), 2009–2011.</p>
+					<p><strong>East Harlem Tutorial Program, NYC</strong> — Tutor and mentor in math, science, and college applications, 2008–2010.</p>
+
+					<h3 style="border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:0.3em; margin-top:1.4em;">Honors &amp; Recognition</h3>
+					<p><strong>Heroes Classroom Namesake: The Feliz Room</strong>, East Harlem Scholars Academy, New York, NY, 2013.</p>
+					<p><strong>NSF AGEP Fellowship</strong>, Spring 2021–2022. $57,272 (competitive national award).</p>
+					<p><strong>Fisk-Vanderbilt Bridge Fellowship</strong>, Fall 2018–2021. $39,000 annual stipend.</p>
+				</article>
+
+				<!-- ═══════════════════════════════════════════════ MEDIA ══ -->
+				<article id="Media">
+					<h2 class="major">Media &amp; Press</h2>
+					<span class="image main"><img src="images/interview.jpeg" alt="" /></span>
+
+					<p><strong><a href="https://www.vanderbilt.edu/evolution/vanderbilt-astronomers-discover-exceedingly-rare-star/" target="_blank">Vanderbilt astronomers discover exceedingly rare star</a></strong><br>
+					The Evolutionary Studies Initiative at Vanderbilt University.</p>
+
+					<p><strong><a href="https://thecostaricanews.com/bryan-villarreal-alvarado-guanacaste-exoplanet-hunter-on-the-search-for-alien-worlds/" target="_blank">Bryan Villarreal Alvarado: Guanacaste Exoplanet Hunter on the Search for Alien Worlds</a></strong><br>
+					The Costa Rica News — on mentorship through the Central American-Caribbean Bridge Program.</p>
+
+					<p><strong><a href="https://news.vanderbilt.edu/2021/01/25/students-fascination-with-astronomy-inspires-first-completed-immersion-vanderbilt-project/" target="_blank">Student's fascination with astronomy inspires first completed Immersion Vanderbilt project</a></strong><br>
+					Vanderbilt University News — on mentoring Samantha Bianco, the first student to complete an Immersion Vanderbilt project.</p>
+
+					<p><strong><a href="https://news.vanderbilt.edu/2020/06/24/vanderbilt-astronomers-among-nasas-tess-mission-team-to-discover-a-rare-newly-formed-planet/" target="_blank">AU Microscopii b discovery</a></strong><br>
+					Vanderbilt University News — on the team discovery of the young transiting planet AU Mic b.</p>
+
+					<p><strong><a href="https://room.eu.com/news/proxima-centauri-may-host-a-second-exoplanet-but-its-first-might-not-be-there" target="_blank">Proxima Centauri: the difficulty of confirming Proxima b</a></strong><br>
+					Room: The Space Journal.</p>
+
+					<p><strong><a href="https://www.east-harlem.com/index.php/News/view/world_meet_dax/" target="_blank">World, Meet Dax</a></strong><br>
+					East Harlem.com — my first press interview.</p>
+				</article>
+
+			</div><!-- /main -->
+
+			<!-- Footer -->
+			<footer id="footer">
+				<p class="copyright" style="font-size:0.75em; opacity:0.5;">
+					Dax L. Feliz, PhD &nbsp;·&nbsp; dfeliz@flatironinstitute.org &nbsp;·&nbsp;
+					Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a>
+				</p>
+			</footer>
+
+		</div><!-- /wrapper -->
 
 		<!-- BG -->
-			<div id="bg"></div>
+		<div id="bg"></div>
+
+		<!-- ═══════════════════════════════════════
+		     PUBLICATION METRICS — update here only
+		     Last updated: 2026-04-01
+		     ═══════════════════════════════════════ -->
+		<script>
+			const METRICS = {
+				papers:     31,
+				firstAuthor: 3,
+				citations:  1007,
+				hIndex:     17,
+				mentees:    14,
+				adsDate:    "early 2026"
+			};
+			document.addEventListener("DOMContentLoaded", () => {
+				document.querySelectorAll("[data-metric]").forEach(el => {
+					const val = METRICS[el.dataset.metric];
+					el.textContent = typeof val === "number"
+						? val.toLocaleString()
+						: val;
+				});
+			});
+		</script>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
-
-
