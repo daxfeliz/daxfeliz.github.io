@@ -1,0 +1,732 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Dax L. Feliz, PhD</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* ── Stat bar ── */
+			.stat-bar {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.6em 1.4em;
+				margin: 1.2em 0 1.6em 0;
+				padding: 0.9em 1.1em;
+				border: 1px solid rgba(255,255,255,0.15);
+				border-radius: 6px;
+				background: rgba(255,255,255,0.04);
+			}
+			.stat-bar .stat { text-align: center; flex: 1 1 80px; }
+			.stat-bar .stat .num { font-size: 1.5em; font-weight: 700; display: block; }
+			.stat-bar .stat .lbl { font-size: 0.72em; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.08em; }
+
+			/* ── Research pillars ── */
+			.pillar {
+				border-left: 3px solid rgba(255,255,255,0.25);
+				padding-left: 1em;
+				margin-bottom: 2em;
+			}
+			.pillar h3 { margin-bottom: 0.3em; }
+			.pillar .tag {
+				display: inline-block;
+				font-size: 0.65em;
+				padding: 0.15em 0.5em;
+				border: 1px solid rgba(255,255,255,0.3);
+				border-radius: 3px;
+				margin-right: 0.3em;
+				vertical-align: middle;
+				text-transform: uppercase;
+				letter-spacing: 0.06em;
+				opacity: 0.75;
+			}
+
+
+			/* ── NEMESIS research figures and links ── */
+			.nemesis-links { display:flex; flex-wrap:wrap; gap:0.55em; margin:1em 0 1.4em; }
+			.nemesis-links a {
+				display:inline-block; padding:0.35em 0.7em;
+				border:1px solid rgba(255,255,255,0.3); border-radius:4px;
+				font-size:0.85em; text-decoration:none;
+			}
+			.nemesis-links a:hover { background:rgba(255,255,255,0.12); }
+			.nemesis-gallery {
+				display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,235px),1fr));
+				gap:1.2em; margin:1.3em 0;
+			}
+			.nemesis-gallery figure { margin:0; min-width:0; }
+			.nemesis-gallery a { display:block; border-bottom:0; }
+			.nemesis-gallery img {
+				width:100%; height:265px; object-fit:contain; background:#fff;
+				border:1px solid rgba(255,255,255,0.17); border-radius:4px;
+			}
+			.nemesis-gallery figcaption { font-size:0.77em; opacity:0.82; line-height:1.5; margin-top:0.55em; }
+			.nemesis-gallery figcaption strong { opacity:1; }
+
+			/* ── Publication list ── */
+			.pub-section h3 {
+				border-bottom: 1px solid rgba(255,255,255,0.15);
+				padding-bottom: 0.3em;
+				margin-top: 1.6em;
+			}
+			ol.pubs { padding-left: 1.4em; }
+			ol.pubs li { margin-bottom: 0.7em; font-size: 0.9em; line-height: 1.5; }
+			ol.pubs li strong { font-weight: 700; }
+			ol.pubs li em { font-style: italic; }
+			ol.pubs li a { color: inherit; border-bottom: 1px dotted rgba(255,255,255,0.4); }
+			ol.pubs li a:hover { border-bottom-style: solid; }
+
+			/* ── Mentoring table ── */
+			.mentee-block { margin-bottom: 1.4em; }
+			.mentee-block .level-tag {
+				font-size: 0.65em;
+				text-transform: uppercase;
+				letter-spacing: 0.08em;
+				opacity: 0.6;
+				display: block;
+				margin-bottom: 0.2em;
+			}
+			.mentee-block p { margin: 0 0 0.25em 0; font-size: 0.9em; }
+			.outcome { font-size: 0.8em; opacity: 0.65; font-style: italic; }
+
+			/* ── Bootcamp CTA button ── */
+			.cta-btn {
+				display: inline-block;
+				margin-top: 1.2em;
+				padding: 0.65em 1.6em;
+				border: 2px solid rgba(255,255,255,0.6);
+				border-radius: 4px;
+				font-size: 1em;
+				font-weight: 600;
+				letter-spacing: 0.04em;
+				text-decoration: none;
+				color: inherit;
+				transition: background 0.2s, border-color 0.2s;
+			}
+			.cta-btn:hover {
+				background: rgba(255,255,255,0.12);
+				border-color: rgba(255,255,255,0.9);
+			}
+			.talk-entry { margin-bottom: 1.2em; }
+			.talk-entry .talk-title { font-weight: 600; }
+			.talk-entry .talk-meta { font-size: 0.82em; opacity: 0.7; }
+			.talk-badge {
+				display: inline-block;
+				font-size: 0.62em;
+				padding: 0.1em 0.45em;
+				border-radius: 3px;
+				text-transform: uppercase;
+				letter-spacing: 0.06em;
+				margin-right: 0.3em;
+				background: rgba(255,255,255,0.12);
+				vertical-align: middle;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<div class="image">
+					<span class="image avatar"><img src="images/Dax_headshot2.jpg" alt="Dax L. Feliz" width="300" height="400"/></span>
+				</div>
+				<div class="content">
+					<div class="inner">
+						<h1>Dax L. Feliz, PhD</h1>
+						<p>Flatiron Research Fellow · Center for Computational Astrophysics, NYC<br>
+						Exoplanet transits · Stellar flares · M-dwarf photometry · TESS / PLATO pipelines</p>
+						<p style="font-size:0.85em; margin-top:0.5em;">
+							<a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Feliz%2C+Dax%22&sort=date+desc" target="_blank">NASA ADS</a> &nbsp;·&nbsp;
+							<a href="https://orcid.org/0000-0002-2457-7889" target="_blank">ORCID</a> &nbsp;·&nbsp;
+							<a href="https://github.com/daxfeliz" target="_blank">GitHub</a> &nbsp;·&nbsp;
+							<a href="mailto:dfeliz@flatironinstitute.org">Email</a>
+						</p>
+					</div>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="#AboutMe">About</a></li>
+						<li><a href="#Research">Research</a></li>
+						<li><a href="#Publications">Publications</a></li>
+						<li><a href="#Talks">Talks</a></li>
+						<li><a href="#Mentoring">Mentoring</a></li>
+						<li><a href="#Bootcamp">Bootcamp</a></li>
+						<li><a href="#Outreach">Outreach</a></li>
+						<li><a href="#Media">Media</a></li>
+                        <!--<li><a href="CV/Dax_Feliz_CV.pdf" target="_blank">CV</a></li> -->
+                        <li><a href="#CV">CV</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<!-- Main -->
+			<div id="main">
+
+				<!-- ═══════════════════════════════════════════════ ABOUT ══ -->
+				<article id="AboutMe">
+					<h2 class="major">About Me</h2>
+					<span class="image main"><img src="images/harlem.jpg" alt="East Harlem, NYC" /></span>
+
+					<p>Growing up in Spanish Harlem, New York City's light pollution denied me a clear view of the night sky — but it never stopped me from asking what lay beyond the steel and glass. The Moon was my first obsession, and from it came the questions that still drive my work: Where did the planets come from? Are there other worlds out there? Which of them could sustain an atmosphere, or even life?</p>
+
+					<p>Those questions now constitute my research program. I am a <strong>Flatiron Research Fellow</strong> at the <a href="https://www.simonsfoundation.org/flatiron/center-for-computational-astrophysics/" target="_blank">Center for Computational Astrophysics (CCA)</a>, Flatiron Institute, NYC, working on an end-to-end observational framework to forecast atmosphere retention in nearby M-dwarf planetary systems.</p>
+
+					<p>My approach combines three threads: (1) a completeness-controlled transit survey of M-dwarfs in TESS Full Frame Images (<a href="#Research">NEMESIS</a>); (2) multi-epoch stellar flare frequency distributions and activity evolution from TESS, K2, and ground-based photometry; and (3) Galactic-context characterization via Gaia kinematics and SDSS spectroscopic metallicities. The long-term output is a ranked, observation-ready target list for atmospheric characterization with JWST, Roman, and PLATO.</p>
+
+					<p>Before joining the CCA, I was a Postdoctoral Researcher at the <a href="https://www.amnh.org/" target="_blank">American Museum of Natural History</a> (2022–2024), a Postdoctoral Researcher at Vanderbilt University (2022), and a Visiting Graduate Student Fellow at George Mason University (2021–2022). I completed my PhD in Astrophysics at Vanderbilt University in 2022 (advisor: Dr. Keivan Stassun), my M.A. in Physics at Fisk University in 2018, and my B.S. in Astrophysics at UMass Amherst in 2013.</p>
+
+					<!-- Stat bar -->
+					<div class="stat-bar">
+						<div class="stat"><span class="num" data-metric="papers"></span><span class="lbl">Refereed papers</span></div>
+						<div class="stat"><span class="num" data-metric="firstAuthor"></span><span class="lbl">First-author</span></div>
+						<div class="stat"><span class="num" data-metric="citations"></span><span class="lbl">Citations</span></div>
+						<div class="stat"><span class="num" data-metric="hIndex"></span><span class="lbl">h-index</span></div>
+						<div class="stat"><span class="num" data-metric="mentees"></span><span class="lbl">Mentees</span></div>
+					</div>
+					<p style="font-size:0.75em; opacity:0.55; margin-top:-0.8em;">Metrics via NASA ADS as of <span data-metric="adsDate"></span>.</p>
+				</article>
+
+				<!-- ══════════════════════════════════════════════ RESEARCH ══ -->
+				<article id="Research">
+					<h2 class="major">Research</h2>
+					<span class="image main"><img src="images/venus_transit.gif" alt="Venus transit animation" /></span>
+
+					<p>My research program asks a single driving question: <em>which nearby M-dwarf planets are most likely to retain an atmosphere, and how do we prioritize them for follow-up?</em> Answering it requires connecting planet detection, stellar activity history, and Galactic context into one coherent framework.</p>
+
+					<!-- Pillar 1: NEMESIS -->
+					<div class="pillar" id="nemesis">
+						<h3>NEMESIS: Exoplanet Transit Survey of Nearby M-dwarfs in TESS FFIs
+							<span class="tag">Transit Survey</span>
+							<span class="tag">Open-source Python</span>
+						</h3>
+
+						<p><strong>NEMESIS</strong> is an open-source Python framework for extracting, detrending, searching, and vetting time-series photometry from NASA's <strong>Transiting Exoplanet Survey Satellite (TESS)</strong> Full Frame Images (FFIs), optimized for nearby M-dwarf stars. Unlike searches restricted to preselected short-cadence targets, NEMESIS uses the FFIs to investigate M dwarfs that may have been observed only at the 30-minute cadence of the TESS Primary Mission.</p>
+
+						<p>The workflow starts with TESSCut image cutouts and constructs target-centered light curves through background estimation, aperture photometry, neighbor-contamination correction, quality masking, pixel-level decorrelation (PLD), and variability detrending. Each light curve is searched using both Box Least Squares (BLS) and Transit Least Squares (TLS), with automated diagnostics and LEO-Vetter tests used to characterize possible transits. Separate injection–recovery and orbit-scrambling experiments measure detection sensitivity and the rate of noise-generated false alarms. For candidates, follow-up modeling in the NEMESIS II analysis uses <em>jaxoplanet</em> transit fits and <em>TRICERATOPS</em> false-positive probabilities.</p>
+
+						<p><strong>NEMESIS I</strong> (<a href="https://iopscience.iop.org/article/10.3847/1538-3881/abedb3" target="_blank" rel="noopener noreferrer">Feliz et al. 2021, <em>The Astronomical Journal</em></a>) introduced the survey and searched nearby M dwarfs observed in TESS Sectors 1–5, reporting 29 planet candidates, including 24 new detections. One candidate from this survey, TOI-7384 b, has since been confirmed in follow-up work.</p>
+
+						<p><strong>NEMESIS II</strong> (<em>Feliz et al., in preparation; November 2026 draft</em>) expands the search to the complete TESS Primary Mission (Sectors 1–26). We analyzed <strong>213,658 single-sector light curves</strong> from <strong>113,047 M dwarfs</strong> within 100 pc. After automated vetting and cross-sector reconciliation, the catalog contains 525 distinct transit-like signals with converged transit fits. TRICERATOPS favors a planetary origin for <strong>262</strong> of these, including <strong>232</strong> on stars without previously cataloged TESS candidates or transiting planets. These remain <em>planet candidates, not validated planets</em>; the survey's injection–recovery and scrambling controls quantify the selection effects and noise contamination needed to interpret the population.</p>
+
+						<div class="nemesis-links" aria-label="NEMESIS project resources">
+							<a href="https://github.com/daxfeliz/NEMESIS" target="_blank" rel="noopener noreferrer">Source code on GitHub</a>
+							<a href="https://nemesis-tess.readthedocs.io/en/latest/" target="_blank" rel="noopener noreferrer">Documentation &amp; tutorials</a>
+							<a href="https://iopscience.iop.org/article/10.3847/1538-3881/abedb3" target="_blank" rel="noopener noreferrer">NEMESIS I paper (2021)</a>
+						</div>
+
+						<h4>Selected figures from NEMESIS II</h4>
+						<p style="font-size:0.83em; opacity:0.8;">Figures are from the manuscript in preparation; click any image to open the full-resolution version.</p>
+
+						<div class="nemesis-gallery">
+							<figure>
+								<a href="images/nemesis2_figure04_workflow.png" target="_blank" rel="noopener noreferrer">
+									<img src="images/nemesis2_figure04_workflow.png" loading="lazy" alt="NEMESIS II flowchart showing light-curve extraction, transit search, automated vetting, injection-recovery, scrambling, and follow-up characterization" />
+								</a>
+								<figcaption><strong>Pipeline workflow (Fig. 4).</strong> From FFI cutouts and PLD detrending through BLS/TLS searches, LEO-Vetter, transit fitting, and statistical false-positive analysis. Dotted steps distinguish the injection and scramble tests.</figcaption>
+							</figure>
+							<figure>
+								<a href="images/nemesis2_figure05_cdpp.png" target="_blank" rel="noopener noreferrer">
+									<img src="images/nemesis2_figure05_cdpp.png" loading="lazy" alt="Photometric precision measured as CDPP versus TESS magnitude at the SAP, PLD-corrected and detrended stages" />
+								</a>
+								<figcaption><strong>Light-curve precision (Fig. 5).</strong> Combined Differential Photometric Precision (CDPP) versus TESS magnitude, comparing aperture photometry, PLD-corrected flux, and final detrended light curves.</figcaption>
+							</figure>
+							<figure>
+								<a href="images/nemesis2_figure08_transit_gallery.png" target="_blank" rel="noopener noreferrer">
+									<img src="images/nemesis2_figure08_transit_gallery.png" loading="lazy" alt="Gallery of 21 phase-folded NEMESIS II candidate transit signals, ordered by detection statistic" />
+								</a>
+								<figcaption><strong>Transit gallery (Fig. 8).</strong> Twenty-one illustrative phase-folded signals with fitted transit models. These are candidate signals, not confirmed planets; some require additional astrophysical vetting.</figcaption>
+							</figure>
+							<figure>
+								<a href="images/nemesis2_figure15_period_radius.png" target="_blank" rel="noopener noreferrer">
+									<img src="images/nemesis2_figure15_period_radius.png" loading="lazy" alt="Orbital period versus planetary radius for 232 new NEMESIS II candidate signals compared with TESS catalog entries" />
+								</a>
+								<figcaption><strong>Planet period–radius distribution (Fig. 15).</strong> The 232 new planet candidates compared with previously cataloged TESS candidates and transiting planets, with stellar insolation and reference boundaries shown for context.</figcaption>
+							</figure>
+						</div>
+					</div>
+
+					<!-- Pillar 2 -->
+					<div class="pillar">
+						<h3>Stellar Flare Activity &amp; Evolution
+							<span class="tag">Flares</span>
+							<span class="tag">Time-Domain</span>
+						</h3>
+						<p>Stellar flares are not just nuisances for transit searches — they are the primary record of a star's historical XUV output and thus the dominant driver of atmospheric escape. I am building multi-epoch flare frequency distributions (FFDs) for nearby M-dwarfs using TESS, K2, and ground-based photometry, with the goal of reconstructing each star's cumulative high-energy irradiation history.</p>
+
+						<p>Related work includes a <strong>NASA TESS Guest Investigator Cycle 9 proposal</strong> (PI: D. L. Feliz, under review): <em>Long-Term Evolution of M-dwarf Flare Activity with K2, TESS, and Ground-Based Photometry</em>. I am also a member of the <strong>ESA PLATO Flare Removal Working Group</strong> (2020–present), developing algorithms to detect and remove flare signatures from PLATO photometric time series.</p>
+
+						<p>Collaborative contributions: Paudel et al. 2024 (multiwavelength TESS/K2/Swift/HST M-dwarf flare survey); Cool Stars 22 poster on photometric activity cycles in M-dwarfs (<a href="https://zenodo.org/records/13146889" target="_blank">Zenodo</a>).</p>
+					</div>
+
+					<!-- Pillar 3 / Future Directions -->
+					<div class="pillar">
+						<h3>Future Directions: From Detections to Atmosphere Forecasts
+							<span class="tag">TESS / JWST / Roman / PLATO</span>
+							<span class="tag">In Progress</span>
+						</h3>
+
+						<p>The transit survey and flare activity programs are not ends in themselves — they are the foundation for a longer-term question: <em>which nearby M-dwarf planets are most likely to retain an atmosphere, and how do we prove it with data?</em> The demographic signature of the radius valley hints that atmospheric escape is shaping planet populations, but demographics alone cannot tell us which individual planets are worth targeting with JWST or Roman. The <strong>Cosmic Shoreline</strong> (Zahnle &amp; Catling 2017) offers a physical bridge: it separates worlds that retain atmospheres from those that don't as a function of cumulative stellar irradiation and escape velocity — turning a population-level hint into a per-planet, testable boundary.</p>
+
+						<!-- Slide 22 figure: export from Google Slides as PNG at full res (wide aspect ratio) -->
+						<!-- Rename file to: nemesis_arm_shoreline.png -->
+						<figure style="margin:1.2em 0; text-align:center;">
+							<img src="images/nemesis_arm_shoreline.png"
+								 style="width:100%; max-width:860px; border:1px solid rgba(255,255,255,0.1); border-radius:4px;"
+								 alt="Two-panel figure: (a) NEMESIS M-dwarf planet candidates in period-radius space with stellar insolation color-coding and radius valley boundaries; (b) the same planets placed on the Cosmic Shoreline diagram of historic XUV fluence vs escape velocity, colored by Atmosphere Retention Metric (ARM)" />
+							<figcaption style="font-size:0.75em; opacity:0.65; margin-top:0.4em;">
+								<strong>Which M-dwarf planets can keep an atmosphere?</strong> (a) NEMESIS planet candidates in orbital period–radius space, color-coded by stellar insolation. The radius valley boundary separating rocky planets from sub-Neptunes is shown for both Sun-like and low-mass stars, with RV detection thresholds overlaid. (b) The same planets placed on the Cosmic Shoreline (historic XUV fluence vs. escape velocity), color-coded by the Atmosphere Retention Metric (ARM). Solar System bodies (squares) anchor the empirical atmosphere-loss boundary. Planets in the blue region are strong candidates for retained atmospheres and priority targets for JWST / Roman follow-up.
+							</figcaption>
+						</figure>
+
+						<p>My research group will build the <strong>Atmosphere Retention Metric (ARM)</strong> — a predictive, completeness-aware framework with three interlocking components. First, the NEMESIS catalog provides a vetted, completeness-characterized nearby M-dwarf planet sample with uniform Gaia kinematic ages and SDSS spectroscopic metallicities, placing each system consistently in period–radius and escape velocity–I<sub>XUV</sub> space. Second, a targeted mass-anchor program — using EPRV where stellar activity permits, and TTVs or informative upper limits otherwise — pins down escape velocities for the highest-leverage planets using an information-gain targeting strategy. Third, the stellar activity program delivers per-star XUV histories from multi-epoch flare frequency distributions and rotation periods, which feed into a predictive model that allows the atmosphere-loss boundary to shift with stellar age and composition.</p>
+
+						<p>The output is a per-planet atmosphere-retention probability with uncertainty, and a ranked, observation-ready spectroscopy target list for JWST, Roman, and PLATO. Roman's wide-field time-domain coverage will extend the nearby M-dwarf sample to longer periods and improve activity baselines; PLATO's long time coverage and stellar characterization will link demographics to age and evolutionary state. Together, these missions transform the current planet-discovery era into a forecasting era — and the ARM framework is designed to be the tool that connects them.</p>
+
+					</div>
+
+					<!-- Proxima -->
+					<div class="pillar">
+						<h3>A Multi-Year Transit Search of Proxima Centauri</h3>
+						<p>Using 329 ground-based light curves spanning 2006–2017, we searched for transit events of the candidate planet Proxima Centauri b (P ≈ 11.2 d, depth ≈ 5 mmag). In <a href="https://iopscience.iop.org/article/10.3847/1538-3881/aabded/meta" target="_blank">Blank et al. 2018</a> (corresponding author: Feliz) we found no corroborating evidence for previously claimed transit epochs. In <a href="https://iopscience.iop.org/article/10.3847/1538-3881/ab184f/meta" target="_blank">Feliz et al. 2019</a> we extended the analysis to 262 high-quality light curves over P = 1–30 d, ruling out transits at the 11.186 d period with high confidence via transit injection-recovery.</p>
+						<center><img src="images/ProxCenb.png" width="380" style="margin:0.8em 0;" alt="Artist's impression of Proxima Centauri b" /><br>
+						<small>Artist's impression of Proxima Centauri b. Credit: ESO.</small></center>
+					</div>
+				</article>
+
+				<!-- ══════════════════════════════════════════════ PUBLICATIONS ══ -->
+				<article id="Publications">
+					<h2 class="major">Publications</h2>
+
+					<p style="font-size:0.9em;"><span data-metric="papers"></span> refereed papers · <span data-metric="firstAuthor"></span> first-author · <span data-metric="citations"></span> citations · h-index <span data-metric="hIndex"></span> (NASA ADS, <span data-metric="adsDate"></span>).<br>
+					Full list: <a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Feliz%2C+Dax%22&sort=date+desc" target="_blank">NASA ADS</a> &nbsp;|&nbsp; <a href="https://orcid.org/0000-0002-2457-7889" target="_blank">ORCID 0000-0002-2457-7889</a></p>
+
+					<div class="pub-section">
+						<h3>First-Author Refereed Publications</h3>
+						<ol class="pubs">
+							<li><strong>Dax L. Feliz</strong>, Peter Plavchan, Samantha N. Bianco, et al.
+								NEMESIS: Exoplanet Transit Survey of Nearby M-dwarfs in TESS FFIs. I.
+								<em>The Astronomical Journal</em>, 161(5):247, May 2021.
+								<a href="https://arxiv.org/abs/2103.05647" target="_blank">[arXiv]</a></li>
+							<li><strong>Dax L. Feliz</strong>, David L. Blank, Karen A. Collins, et al.
+								A Multi-year Search for Transits of Proxima Centauri. II. No Evidence for Transit Events with Periods between 1 and 30 days.
+								<em>The Astronomical Journal</em>, 157(6):226, Jun 2019.
+								<a href="https://iopscience.iop.org/article/10.3847/1538-3881/ab184f/meta" target="_blank">[Journal]</a></li>
+							<li>David L. Blank, <strong>Dax L. Feliz</strong>** (corresponding author), Karen A. Collins, et al.
+								A Multi-year Search for Transits of Proxima Centauri. I. Light Curves Corresponding to Published Ephemerides.
+								<em>The Astronomical Journal</em>, 155(6):228, Jun 2018.
+								<a href="https://iopscience.iop.org/article/10.3847/1538-3881/aabded/meta" target="_blank">[Journal]</a></li>
+						</ol>
+
+						<h3>Key Collaborative Publications</h3>
+						<ol class="pubs">
+							<li>Peter Plavchan, Thomas Barclay, Jonathan Gagné, …, <strong>Dax Feliz</strong>, et al.
+								A planet within the debris disk around the pre-main-sequence star AU Microscopii.
+								<em>Nature</em>, 582(7813):497–500, June 2020.
+								<a href="https://doi.org/10.1038/s41586-020-2400-z" target="_blank">[Journal]</a></li>
+							<li>Heike Rauer, Conny Aerts, Cabrera, …, <strong>D. L. Feliz</strong>, et al.
+								The PLATO mission.
+								<em>Experimental Astronomy</em>, 59(3):26, June 2025.
+								<a href="https://arxiv.org/abs/2406.05447" target="_blank">[arXiv]</a></li>
+							<li>Karen A. Collins, Kevin I. Collins, Joshua Pepper, …, <strong>Dax L. Feliz</strong>, et al.
+								The KELT Follow-up Network and Transit False-positive Catalog: Pre-vetted False Positives for TESS.
+								<em>The Astronomical Journal</em>, 156(5):234, Nov 2018.
+								<a href="https://doi.org/10.3847/1538-3881/aae582" target="_blank">[Journal]</a></li>
+						</ol>
+
+						<h3>Selected Peer-Reviewed Publications (N<sup>th</sup> Author)</h3>
+						<p style="font-size:0.82em; opacity:0.65; margin-top:-0.6em; margin-bottom:0.8em;">
+							Curated for thematic relevance to M-dwarf exoplanet detection, stellar activity, and time-domain photometry.
+							<a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Feliz%2C+Dax%22&sort=date+desc" target="_blank">Full list of 31 papers on NASA ADS.</a>
+						</p>
+						<ol class="pubs">
+							<!-- PINNED: confirms NEMESIS I candidate TOI-7384 b — keep at top regardless of future additions -->
+							<li>Madison G. Scott, Georgina Dransfield, Mathilde Timmermans, …, <strong>Dax L. Feliz</strong>, et al.
+								Two temperate Earth- and Neptune-sized planets orbiting fully convective M dwarfs.
+								<em>MNRAS</em>, January 2026.
+								<a href="https://arxiv.org/abs/2601.05799" target="_blank">[arXiv]</a>
+								<em style="opacity:0.6;"> — Confirms NEMESIS I candidate TOI-7384 b.</em></li>
+							<li>Rishi R. Paudel, Thomas Barclay, Allison Youngblood, …, <strong>Dax L. Feliz</strong>, et al.
+								A Multiwavelength Survey of Nearby M Dwarfs: Optical and Near-ultraviolet Flares and Activity with Contemporaneous TESS, Kepler/K2, Swift, and HST Observations.
+								<em>ApJ</em>, 971(1):24, August 2024.
+								<a href="https://doi.org/10.3847/1538-4357/ad487d" target="_blank">[Journal]</a></li>
+							<li>Lionel J. Garcia, Daniel Foreman-Mackey, Catriona A. Murray, …, <strong>Dax L. Feliz</strong>, et al.
+								nuance: Efficient Detection of Planets Transiting Active Stars.
+								<em>AJ</em>, 167(6):284, June 2024.
+								<a href="https://arxiv.org/abs/2402.06835" target="_blank">[arXiv]</a></li>
+							<li>Justin M. Wittrock, Peter P. Plavchan, Bryson L. Cale, …, <strong>Dax L. Feliz</strong>, et al.
+								Validating AU Microscopii d with Transit Timing Variations.
+								<em>AJ</em>, 166(6):232, December 2023.
+								<a href="https://arxiv.org/abs/2302.04922" target="_blank">[arXiv]</a></li>
+							<li>Ian Stotesbury, Billy Edwards, …, <strong>Dax L. Feliz</strong>, et al.
+								Twinkle: a small satellite spectroscopy mission for the next phase of exoplanet science.
+								<em>SPIE</em>, 12180:1218033, August 2022.
+								<a href="https://arxiv.org/abs/2209.03337" target="_blank">[arXiv]</a></li>
+							<li>Justin M. Wittrock, Stefan Dreizler, Michael A. Reefe, Brett M. Morris, …, <strong>D. L. Feliz</strong>, et al.
+								Transit Timing Variations for AU Microscopii b and c.
+								<em>AJ</em>, 164(1):27, July 2022.
+								<a href="https://arxiv.org/abs/2202.05813" target="_blank">[arXiv]</a></li>
+							<li>Christina Hedges, Alex Hughes, George Zhou, …, <strong>D. L. Feliz</strong>, et al.
+								TOI-2076 and TOI-1807: Two Young, Comoving Planetary Systems within 50 pc Identified by TESS.
+								<em>AJ</em>, 162(2):54, August 2021.
+								<a href="https://doi.org/10.3847/1538-3881/ac06cd" target="_blank">[Journal]</a></li>
+							<li>Heike Rauer, Conny Aerts, …, <strong>D. L. Feliz</strong>, et al.
+								The PLATO mission.
+								<em>Experimental Astronomy</em>, 59(3):26, June 2025.
+								<a href="https://arxiv.org/abs/2406.05447" target="_blank">[arXiv]</a>
+								<em style="opacity:0.6;"> — ESA PLATO Flare Removal Working Group member.</em></li>
+						</ol>
+						<p style="font-size:0.8em; opacity:0.6; margin-top:0.4em;">See <a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Feliz%2C+Dax%22&sort=date+desc" target="_blank">NASA ADS</a> for the complete list of 31 papers.</p>
+					</div>
+				</article>
+
+				<!-- ═══════════════════════════════════════════════ TALKS ══ -->
+				<article id="Talks">
+					<h2 class="major">Talks &amp; Presentations</h2>
+					<span class="image main"><img src="images/talks.png" alt="" /></span>
+
+					<p>Selected invited and contributed talks. Full record in <a href="CV/Dax_Feliz_CV.pdf" target="_blank">CV</a>.</p>
+
+					<h3 style="border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:0.3em;">Invited Colloquia &amp; Seminars</h3>
+
+					<div class="talk-entry">
+						<span class="talk-badge">Invited</span>
+						<span class="talk-title">From Exoplanet Detections to Atmosphere Forecasts Around Nearby M-Dwarfs</span><br>
+						<span class="talk-meta">Job Talk / Departmental Seminar · NYC College of Technology Physics Dept., February 2026 &nbsp;
+						<a href="Talks/DaxFeliz_JobTalk_2026.pdf" target="_blank">[Slides]</a></span>
+					</div>
+
+					<div class="talk-entry">
+						<span class="talk-badge">Invited</span>
+						<span class="talk-title">NEMESIS I: Exoplanet Transit Survey of Nearby M-dwarfs in TESS FFIs I</span><br>
+						<span class="talk-meta">
+							MIT TESS Science Talk (Mar 2021) ·
+							Rubin LSST TVS Seminar (Jun 2021) ·
+							Center for Exoplanets &amp; Habitable Worlds Seminar, Penn State (Sep 2021)
+						</span>
+					</div>
+
+					<h3 style="border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:0.3em; margin-top:1.4em;">Invited Conference &amp; Workshop Talks</h3>
+
+					<div class="talk-entry">
+						<span class="talk-badge">Invited</span>
+						<span class="talk-title">NEMESIS II: Exoplanet Transit Survey of Nearby M-dwarfs in TESS FFIs</span><br>
+						<span class="talk-meta">
+							Emerging Researchers in Exoplanets (ERES) X, Princeton University (Jun 2025) ·
+							"From Trends to Transits" Workshop, University of New Mexico (Aug 2025)
+						</span>
+					</div>
+
+					<div class="talk-entry">
+						<span class="talk-badge">Invited</span>
+						<span class="talk-title">M-dwarfs are cool!</span><br>
+						<span class="talk-meta">AstroFest, Flatiron CCA, September 2024 &amp; September 2025</span>
+					</div>
+
+					<div class="talk-entry">
+						<span class="talk-badge">Invited</span>
+						<span class="talk-title">Twinkle, Twinkle Little Star</span><br>
+						<span class="talk-meta">Twinkle and the Next Generation of Exoplanet Scientists Conference, September 2021</span>
+					</div>
+
+					<h3 style="border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:0.3em; margin-top:1.4em;">Contributed Talks &amp; Posters</h3>
+
+					<div class="talk-entry">
+						<span class="talk-badge">Contributed</span>
+						<span class="talk-title">NEMESIS II: Exoplanet Transit Survey of Nearby M-dwarfs in TESS FFIs</span><br>
+						<span class="talk-meta">
+							TESS Science Conference III, MIT (Jul 2024) <a href="https://zenodo.org/records/12973447" target="_blank">[Zenodo]</a> ·
+							Sagan Summer Workshop, Caltech (Jul 2025) <a href="https://nexsci.caltech.edu/workshop/2025/posters/Poster_DaxFeliz_101.pdf" target="_blank">[Poster]</a>
+						</span>
+					</div>
+
+					<div class="talk-entry">
+						<span class="talk-badge">Poster</span>
+						<span class="talk-title">Can Photometric Flares Be Used To Identify Activity Cycles in M-dwarf Stars?</span><br>
+						<span class="talk-meta">Cool Stars 22 (Jul 2024) <a href="https://zenodo.org/records/13146889" target="_blank">[Zenodo]</a></span>
+					</div>
+
+					<div class="talk-entry">
+						<span class="talk-badge">Poster</span>
+						<span class="talk-title">NEMESIS I: Exoplanet Transit Survey of Nearby M-dwarfs in TESS FFIs I</span><br>
+						<span class="talk-meta">
+							Cool Stars 20.5 (Mar 2021) <a href="http://doi.org/10.5281/zenodo.4562794" target="_blank">[Zenodo]</a> ·
+							TESS Science Conference II (Aug 2021) <a href="http://doi.org/10.5281/zenodo.5115302" target="_blank">[Zenodo]</a>
+						</span>
+					</div>
+
+					<h3 style="border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:0.3em; margin-top:1.4em;">Dissertation &amp; Thesis Defenses</h3>
+
+					<div class="talk-entry">
+						<span class="talk-badge">Defense</span>
+						<span class="talk-title">PhD Dissertation Defense, Vanderbilt University</span><br>
+						<span class="talk-meta"><a href="https://docs.google.com/presentation/d/15jjKUEuv1ONYANmF675_grRvDzSPPTF2G5Gio9KS_Ak/edit?usp=sharing" target="_blank">[Slides]</a></span>
+					</div>
+
+					<div class="talk-entry">
+						<span class="talk-badge">Defense</span>
+						<span class="talk-title">A Multi-Year Transit Search of Proxima Centauri — Master's Thesis Defense, Fisk University</span><br>
+						<span class="talk-meta">August 2018 &nbsp;<a href="Talks/DaxFeliz_Masters_Defense.pdf" target="_blank">[Slides]</a></span>
+					</div>
+
+					<h3 style="border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:0.3em; margin-top:1.4em;">Recorded Talks</h3>
+					<p style="font-size:0.9em;">TESS Science Meeting #25 — NEMESIS Pipeline (10 min)</p>
+					<video controls width="100%" style="max-width:480px;">
+						<source src="Talks/DaxFeliz_TESS_SM_25_talk.mp4" type="video/mp4">
+						Your browser does not support MP4 video.
+					</video>
+				</article>
+
+				<!-- ══════════════════════════════════════════════ MENTORING ══ -->
+				<article id="Mentoring">
+					<h2 class="major">Mentoring</h2>
+
+					<p>I have mentored 14 students across high school, undergraduate, and graduate levels. Projects span exoplanet transit detection, stellar flare analysis, and time-series modeling. Trainees have advanced to PhD programs, staff scientist positions, and industry roles.</p>
+
+					<h3 style="border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:0.3em;">Graduate Students</h3>
+
+					<div class="mentee-block">
+						<span class="level-tag">CUNY Master's · CCA · 2024–Present</span>
+						<p><strong>Andrea Bracamonte</strong>, CUNY Graduate Center</p>
+						<p>Searching for M-dwarf Coronal Mass Ejections with TESS and SDSS-V. Co-advised with Dr. Ruth Angus.</p>
+						<p class="outcome">Project feeds CME detection framework and flare-rate priors into the NEMESIS ARM program.</p>
+					</div>
+
+					<div class="mentee-block">
+						<span class="level-tag">CUNY Master's · AMNH/CCA · 2022–2024</span>
+						<p><strong>Ryan Lebron</strong>, CUNY Graduate Center</p>
+						<p>Using Gaussian Processes to model stellar rotation in Zwicky Transient Facility photometry. Co-advised with Dr. Ruth Angus.</p>
+						<p class="outcome">GP-derived rotation period catalog used as stellar activity priors in NEMESIS ARM.</p>
+					</div>
+
+					<h3 style="border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:0.3em; margin-top:1.4em;">Undergraduate Students</h3>
+
+					<div class="mentee-block">
+
+						<span class="level-tag">Barnard Individual Research Course (PHYS-BC3900) · Flatiron CCA · 2026</span>
+						<p><strong>Madeline J. Maldonado Gutierrez</strong>, Barnard College of Columbia University</p>
+						<p>Evaluating Planet Vetting Robustness Across TESS Photometric Pipelines.</p>
+						
+						<span class="level-tag">Barnard Summer Research Institute · AMNH · 2024</span>
+						<p>Detection and Validation of Transiting Exoplanets Around Nearby M-dwarf Stars.</p>
+					</div>
+
+					<div class="mentee-block">
+						<span class="level-tag">AMNH REU · 2023</span>
+						<p><strong>Maliyah Adams</strong>, Arizona State University</p>
+						<p>Detecting Exoplanets Around Nearby M-dwarf Stars from the Revised TESS Habitable Zone Catalog.</p>
+					</div>
+
+					<div class="mentee-block">
+						<span class="level-tag">Central American-Caribbean Bridge Program · 2020–2021</span>
+						<p><strong>Bryan Villarreal Alvarado</strong>, Universidad de Costa Rica</p>
+						<p>Recovery of known TESS Objects of Interest from TESS FFIs.</p>
+						<p class="outcome">Co-author on Feliz et al. 2021. <a href="https://thecostaricanews.com/bryan-villarreal-alvarado-guanacaste-exoplanet-hunter-on-the-search-for-alien-worlds/" target="_blank">Press coverage</a>.</p>
+					</div>
+
+					<div class="mentee-block">
+						<span class="level-tag">Summer Research Internship · Vanderbilt · 2019–2021</span>
+						<p><strong>Samantha N. Bianco</strong>, Vanderbilt University (co-mentored with Dr. Keivan Stassun)</p>
+						<p>TESS transit survey of M-dwarf stars.</p>
+						<p class="outcome">Co-author on Feliz et al. 2021. First student to complete an Immersion Vanderbilt project. Now at STScI. <a href="https://news.vanderbilt.edu/2021/01/25/students-fascination-with-astronomy-inspires-first-completed-immersion-vanderbilt-project/" target="_blank">Press coverage</a>.</p>
+					</div>
+
+					<div class="mentee-block">
+						<span class="level-tag">Summer Research Internship · Vanderbilt · 2019–2020</span>
+						<p><strong>Mary Jimenez</strong>, George Mason University (co-mentored with Dr. Peter Plavchan)</p>
+						<p>Blind transit survey of TESS data for M-dwarf systems.</p>
+						<p class="outcome">Co-author on Feliz et al. 2021.</p>
+					</div>
+
+					<h3 style="border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:0.3em; margin-top:1.4em;">High School Students</h3>
+
+					<div class="mentee-block">
+						<span class="level-tag">AMNH Science Research Mentoring Program · 2023–2024</span>
+						<p><strong>Thamim Chowdhury, Shreeya KC, Kylor Ghai</strong></p>
+						<p>Detection of Transiting Exoplanets and Eclipsing Binaries Around Nearby M-dwarf Stars.</p>
+					</div>
+
+					<div class="mentee-block">
+						<span class="level-tag">AMNH Science Research Mentoring Program · 2022–2023</span>
+						<p><strong>August Fischer, Donovan Bradley, Jashcelyn Canada</strong></p>
+						<p>Detection of Transiting Exoplanets and Eclipsing Binaries Around Nearby M-dwarf Stars.</p>
+					</div>
+
+					<div class="mentee-block">
+						<span class="level-tag">School for Science and Math at Vanderbilt · 2019</span>
+						<p><strong>Felix Bean</strong>, Hunter's Lane High School</p>
+						<p>Detecting exoplanet transits in TESS light curves.</p>
+					</div>
+				</article>
+
+				<!-- ═══════════════════════════════════════════════ BOOTCAMP ══ -->
+				<article id="Bootcamp">
+					<h2 class="major">CUNY Bridge Programming Bootcamp</h2>
+					<span class="image main"><img src="images/workshop.jpeg" alt="Workshop" /></span>
+
+					<p>Each August since 2022, I serve as curriculum developer and lead instructor for a two-week programming bootcamp welcoming incoming students to the <a href="https://www.gc.cuny.edu/astrophysics" target="_blank">CUNY Master's Program in Astrophysics</a>. The bootcamp is designed for students of varied computational backgrounds and is built around the tools and workflows they will encounter immediately in their graduate research.</p>
+
+					<h3 style="border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:0.3em;">What the course covers</h3>
+					<p>The curriculum spans two weeks of daily instruction (~10–15 students per cohort) and includes Python fundamentals, scientific computing with NumPy and pandas, data visualization with Matplotlib, working with astronomical data formats (FITS, light curves, catalogs), version control with Git/GitHub, and an introduction to the NYC astronomy community and its research groups. All materials are open and publicly available.</p>
+
+					<h3 style="border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:0.3em; margin-top:1.4em;">Who it is for</h3>
+					<p>Incoming students in the CUNY Master's in Astrophysics program — particularly those coming from institutions with limited access to research computing infrastructure. No prior Python experience is assumed. The course is paced to bring students from first principles to research-ready in two weeks, with an emphasis on the specific tools used in time-domain photometry and exoplanet research.</p>
+
+					<h3 style="border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:0.3em; margin-top:1.4em;">Editions</h3>
+					<p>August 2022 · August 2023 · August 2024 · August 2025</p>
+
+					<center>
+						<a href="https://daxfeliz.github.io/cunybridgebootcamp/" target="_blank" class="cta-btn">
+							Go to the Bootcamp &#8594;
+						</a>
+					</center>
+				</article>
+
+				<!-- ══════════════════════════════════════════════ OUTREACH ══ -->
+				<article id="Outreach">
+					<h2 class="major">Outreach &amp; Service</h2>
+					<span class="image main"><img src="images/outreach.png" alt="" /></span>
+
+					<h3 style="border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:0.3em;">Professional Service</h3>
+					<p><strong>Member</strong>, ESA PLATO Flare Removal Working Group, 2020–Present</p>
+					<p><strong>Instructor &amp; Curriculum Developer</strong>, <a href="https://daxfeliz.github.io/cunybridgebootcamp/" target="_blank">CUNY Master's in Astrophysics Bridge Programming Bootcamp</a>, 2022–Present. Annual two-week graduate onboarding bootcamp; ~10–15 students per cohort.</p>
+
+					<h3 style="border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:0.3em; margin-top:1.4em;">Teaching</h3>
+					<p><strong>Teaching Assistant</strong>, Introductory Astronomy Laboratory, Vanderbilt University, Fall 2018–Spring 2020.</p>
+					<p><strong>Laboratory Technician / Teaching Assistant</strong>, Electronics Laboratory, Bronx Community College, Spring 2014–Fall 2015.</p>
+
+					<h3 style="border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:0.3em; margin-top:1.4em;">Community Outreach</h3>
+					<p><strong>East Harlem Scholars Academy, NYC</strong> — Alumni Day Speaker, 2010–2015. Astronomy and physics Q&amp;A for elementary school students.</p>
+					<p><strong>Central Park East High School, NYC</strong> — College Panel Speaker, 2009–2013; Robotics Consultant (FIRST Robotics Competition), 2009–2011.</p>
+					<p><strong>East Harlem Tutorial Program, NYC</strong> — Tutor and mentor in math, science, and college applications, 2008–2010.</p>
+
+					<h3 style="border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:0.3em; margin-top:1.4em;">Honors &amp; Recognition</h3>
+					<p><strong>Heroes Classroom Namesake: The Feliz Room</strong>, East Harlem Scholars Academy, New York, NY, 2013.</p>
+					<p><strong>NSF AGEP Fellowship</strong>, Spring 2021–2022. $57,272 (competitive national award).</p>
+					<p><strong>Fisk-Vanderbilt Bridge Fellowship</strong>, Fall 2018–2021. $39,000 annual stipend.</p>
+				</article>
+
+				<!-- ═══════════════════════════════════════════════ MEDIA ══ -->
+				<article id="Media">
+					<h2 class="major">Media &amp; Press</h2>
+					<span class="image main"><img src="images/interview.jpeg" alt="" /></span>
+
+					<p><strong><a href="https://www.vanderbilt.edu/evolution/vanderbilt-astronomers-discover-exceedingly-rare-star/" target="_blank">Vanderbilt astronomers discover exceedingly rare star</a></strong><br>
+					The Evolutionary Studies Initiative at Vanderbilt University.</p>
+
+					<p><strong><a href="https://thecostaricanews.com/bryan-villarreal-alvarado-guanacaste-exoplanet-hunter-on-the-search-for-alien-worlds/" target="_blank">Bryan Villarreal Alvarado: Guanacaste Exoplanet Hunter on the Search for Alien Worlds</a></strong><br>
+					The Costa Rica News — on mentorship through the Central American-Caribbean Bridge Program.</p>
+
+					<p><strong><a href="https://news.vanderbilt.edu/2021/01/25/students-fascination-with-astronomy-inspires-first-completed-immersion-vanderbilt-project/" target="_blank">Student's fascination with astronomy inspires first completed Immersion Vanderbilt project</a></strong><br>
+					Vanderbilt University News — on mentoring Samantha Bianco, the first student to complete an Immersion Vanderbilt project.</p>
+
+					<p><strong><a href="https://news.vanderbilt.edu/2020/06/24/vanderbilt-astronomers-among-nasas-tess-mission-team-to-discover-a-rare-newly-formed-planet/" target="_blank">AU Microscopii b discovery</a></strong><br>
+					Vanderbilt University News — on the team discovery of the young transiting planet AU Mic b.</p>
+
+					<p><strong><a href="https://room.eu.com/news/proxima-centauri-may-host-a-second-exoplanet-but-its-first-might-not-be-there" target="_blank">Proxima Centauri: the difficulty of confirming Proxima b</a></strong><br>
+					Room: The Space Journal.</p>
+
+					<p><strong><a href="https://www.east-harlem.com/index.php/News/view/world_meet_dax/" target="_blank">World, Meet Dax</a></strong><br>
+					East Harlem.com — my first press interview.</p>
+				</article>
+
+
+
+<article id="CV">
+    <h2 class="major">Curriculum Vitae</h2>
+
+    <p style="margin-bottom: 1.2em; font-size: 0.9em; opacity: 0.75;">
+        Scroll to browse, or download the PDF below.
+    </p>
+
+    <!-- Download button — reuses the .cta-btn style already in your <style> block -->
+    <p style="margin-bottom: 1.4em;">
+        <a href="CV/Dax_Feliz_CV.pdf"
+           download="Dax_Feliz_CV.pdf"
+           class="cta-btn"
+           style="margin-top: 0;">
+            &#8595;&nbsp; Download CV (PDF)
+        </a>
+    </p>
+
+    <!-- Embedded viewer -->
+    <div style="
+        width: 100%;
+        height: 78vh;
+        border: 1px solid rgba(255,255,255,0.15);
+        border-radius: 4px;
+        overflow: hidden;
+        background: rgba(0,0,0,0.25);
+    ">
+        <iframe
+            src="CV/Dax_Feliz_CV.pdf#toolbar=1&navpanes=0&scrollbar=1"
+            width="100%"
+            height="100%"
+            style="border: none; display: block;"
+            title="Dax L. Feliz, PhD — Curriculum Vitae">
+            <!-- Fallback for browsers that block inline PDFs (rare, but Safari can) -->
+            <p style="padding: 1.4em; text-align: center; opacity: 0.7; font-size: 0.9em;">
+                Your browser does not support inline PDF viewing.<br>
+                <a href="CV/Dax_Feliz_CV.pdf" target="_blank">Open CV in a new tab</a>
+                &nbsp;or use the download button above.
+            </p>
+        </iframe>
+    </div>
+</article>
+
+
+			</div><!-- /main -->
+
+			<!-- Footer -->
+			<footer id="footer">
+				<p class="copyright" style="font-size:0.75em; opacity:0.5;">
+					Dax L. Feliz, PhD &nbsp;·&nbsp; dfeliz@flatironinstitute.org &nbsp;·&nbsp;
+					Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a>
+				</p>
+			</footer>
+
+		</div><!-- /wrapper -->
+
+		<!-- BG -->
+		<div id="bg"></div>
+
+		<!-- ═══════════════════════════════════════
+		     PUBLICATION METRICS — update here only
+		     Last updated: 2026-04-01
+		     ═══════════════════════════════════════ -->
+		<script>
+			const METRICS = {
+				papers:     31,
+				firstAuthor: 3,
+				citations:  1007,
+				hIndex:     17,
+				mentees:    14,
+				adsDate:    "early 2026"
+			};
+			document.addEventListener("DOMContentLoaded", () => {
+				document.querySelectorAll("[data-metric]").forEach(el => {
+					const val = METRICS[el.dataset.metric];
+					el.textContent = typeof val === "number"
+						? val.toLocaleString()
+						: val;
+				});
+			});
+		</script>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
